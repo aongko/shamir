@@ -35,7 +35,7 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 				'items'=>array(
 					array('label'=>'Home', 'url'=>array('/site/index')),
-					array('label'=>'Learn', 'url'=>array('/learn/index'),
+					array('label'=>'Learn', 'url'=>array('/Learn'),
 						'itemOptions'=>array('class'=>'has-sub'),
 						'items'=>array(
 							array('label'=>'Matematika', 'url'=>'#'),
