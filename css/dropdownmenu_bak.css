@@ -1,0 +1,33 @@
+#cssmenu{
+	height:33px; display:block; padding:0; margin: 0;
+	background:transparent;
+	position:absolute;
+	bottom:0px;
+	border-bottom:solid;
+	background:rgba(0, 0, 0, 0.15);
+	width:100%;
+	font-size:15px;
+} 
+#cssmenu > ul {list-style:inside none; padding:0; margin:0;} 
+#cssmenu > ul > li {list-style:inside none; padding:0; margin:0; float:left;position:relative;} 
+#cssmenu > ul > li > a{ outline:none; display:block; position:relative; padding-right: 20px; padding-left:20px; text-align:center; text-decoration:none;} 
+#cssmenu > ul > li:first-child > a{border-radius:5px 0 0 5px;} 
+#cssmenu > ul > li > a:after{position:absolute;  top:-1px; bottom:-1px; right:-2px; z-index:99; } 
+#cssmenu ul li.has-sub:hover > a:after{top:0; bottom:0;} 
+#cssmenu > ul > li.has-sub > a:before{ position:absolute; top:18px; right:6px; border:5px solid transparent; border-top:5px solid #fff; } 
+#cssmenu > ul > li.has-sub:hover > a:before{top:10px;} 
+#cssmenu ul li.has-sub:hover > a{top:0px; z-index:999; } 
+#cssmenu ul li.has-sub:hover > ul, #cssmenu ul li.has-sub:hover > div{display:block;} 
+#cssmenu ul li.has-sub > a:hover{} 
+#cssmenu ul li > ul, #cssmenu ul li > div{ display:none; width:auto;position:absolute; top:16px; padding:10px 0; background:rgba(0, 0, 0, 0.8); border-radius:0 0 5px 5px; z-index:999;} 
+#cssmenu ul li > ul{width:auto;} 
+#cssmenu ul li > ul li{display:block; list-style:inside none; padding:0; margin:0; position:relative;} 
+#cssmenu ul li > ul li a{ outline:none; display:block; position:relative; margin:0; padding:8px 20px; color:white; text-decoration:none;} 
+#cssmenu ul li > ul li a:hover {background:grey;}
+
+
+
+#cssmenu{border-color:#000;} 
+#cssmenu > ul > li > a{border-right:1px solid #000; color:white; font-weight:normal; font-size:large;} 
+#cssmenu > ul > li > a:after{border-color:#000000;} 
+//#cssmenu > ul > li > a:hover{background:#111;}
