@@ -3249,3 +3249,39 @@ Stack trace:
 REQUEST_URI=/shamir/index.php/Learn/default/index/
 in /opt/lampp/htdocs/shamir/protected/modules/Learn/controllers/DefaultController.php (10)
 in /opt/lampp/htdocs/shamir/index.php (13)
+2013/05/30 01:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ContactUs/site/login".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ContactUs/site/...')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/ContactUs/site/login
+HTTP_REFERER=http://localhost/shamir/index.php/ContactUs
+---
+2013/05/30 01:33:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Learn/site/login".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Learn/site/logi...')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Learn/site/login
+HTTP_REFERER=http://localhost/shamir/index.php/Learn
+---
+2013/05/30 01:35:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Learn/site/login".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Learn/site/logi...')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Learn/site/login
+HTTP_REFERER=http://localhost/shamir/index.php/Learn
+---
+2013/05/30 01:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Learn/site/login".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Learn/site/logi...')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Learn/site/login
+HTTP_REFERER=http://localhost/shamir/index.php/Learn/site/login
+---

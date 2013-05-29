@@ -1,7 +1,7 @@
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'login-form',
-	'action'=>CHtml::normalizeUrl(array('site/login')),
+	'action'=>CHtml::normalizeUrl(array('/site/login')),
 	'enableClientValidation'=>false,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
