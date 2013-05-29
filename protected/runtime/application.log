@@ -3285,3 +3285,43 @@ Stack trace:
 REQUEST_URI=/shamir/index.php/Learn/site/login
 HTTP_REFERER=http://localhost/shamir/index.php/Learn/site/login
 ---
+2013/05/30 01:49:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "default/index".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('default/index')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/default/index?classCategoryId=1
+HTTP_REFERER=http://localhost/shamir/index.php/Learn/default/index/classCategoryId/1
+---
+2013/05/30 01:49:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "default/index".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('default/index')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/default/index?classCategoryId=1
+HTTP_REFERER=http://localhost/shamir/index.php/Learn/default/index/classCategoryId/1
+---
+2013/05/30 01:50:11 [error] [php] Missing argument 1 for CModule::getModule(), called in /opt/lampp/yii/framework/base/CComponent.php on line 111 and defined (/opt/lampp/yii/framework/base/CModule.php:269)
+Stack trace:
+#0 /opt/lampp/htdocs/shamir/protected/modules/Learn/views/default/index.php(17): CWebApplication->__get()
+#1 /opt/lampp/yii/framework/web/CBaseController.php(126): require()
+#2 /opt/lampp/yii/framework/web/CBaseController.php(95): DefaultController->renderInternal()
+#3 /opt/lampp/yii/framework/web/CController.php(869): DefaultController->renderFile()
+#4 /opt/lampp/yii/framework/web/CController.php(782): DefaultController->renderPartial()
+#5 /opt/lampp/htdocs/shamir/protected/modules/Learn/controllers/DefaultController.php(11): DefaultController->render()
+#6 unknown(0): DefaultController->actionIndex()
+#7 /opt/lampp/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#8 /opt/lampp/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 /opt/lampp/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /opt/lampp/yii/framework/web/CController.php(286): DefaultController->runAction()
+#11 /opt/lampp/yii/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#12 /opt/lampp/yii/framework/web/CWebApplication.php(282): DefaultController->run()
+#13 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/shamir/index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/Learn/default/index/classCategoryId/1
+in /opt/lampp/htdocs/shamir/protected/modules/Learn/views/default/index.php (17)
+in /opt/lampp/htdocs/shamir/protected/modules/Learn/controllers/DefaultController.php (11)
+in /opt/lampp/htdocs/shamir/index.php (13)

@@ -14,7 +14,7 @@ $this->breadcrumbs=array(
 		<td>
 			<?php
 				foreach ($classCategoryList as $data) {
-					echo $data->class_category_name . '<br>';
+					echo '<a href=\'' . CHtml::normalizeUrl(array('/' . Yii::app()->controller->module->getId() . '/' . Yii::app()->controller->getId() .'/' . Yii::app()->controller->action->getId() , 'classCategoryId'=>$data->class_category_id)) . '\'>' . $data->class_category_name . '<br>';
 				}
 			?>
 		</td>
