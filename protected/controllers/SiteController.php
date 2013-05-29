@@ -51,11 +51,13 @@ class SiteController extends Controller
 				$prof->email2 = $model->email2;
 				$prof->motto = $model->motto;
 				$prof->city_id = 1;
+				$prof->status_record = 'I';
 				if ($prof->validate()) {
 					$acc->user_name = $model->user_name;
 					$acc->password = $model->password;
 					$acc->user_type_id = 1;
 					$acc->profile_id = 0; //dummy, to be replaced
+					$acc->status_record = 'I';
 					if ($acc->validate()) {
 						$prof->save();
 						$acc->profile_id = $prof->profile_id;

@@ -31,7 +31,7 @@ class UserIdentity extends CUserIdentity
 			$this->errorCode=self::ERROR_NONE;
 		return !$this->errorCode;
 		*/
-		$lho = MasterAccount::Model()->findByAttributes(array('account_id' => $this->username));
+		$lho = MasterAccount::Model()->findByAttributes(array('user_name' => $this->username), 'status_record <> \'D\'');
 		if ($lho === null)
 			$this->errorCode = self::ERROR_USERNAME_INVALID;
 		else if ($lho->password != $this->password)
