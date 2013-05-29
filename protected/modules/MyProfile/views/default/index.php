@@ -1,6 +1,7 @@
 <?php
 /* @var $this DefaultController */
 
+$this->pageTitle=Yii::app()->name . ' - ' . $this->module->id;
 $this->breadcrumbs=array(
 	$this->module->id,
 );

@@ -31,6 +31,8 @@ return array(
 		'Learn',
 		'MyClass',
 		'MyProfile',
+		'AboutUs',
+		'ContactUs',
 		
 	),
 

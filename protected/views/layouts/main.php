@@ -43,12 +43,12 @@
 							array('label'=>'Biologi', 'url'=>'#'),
 						)
 					),
-					array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-					array('label'=>'Contact', 'url'=>array('/site/contact')),
-					array('label'=>'My Class', 'url'=>array('/site/page', 'view'=>'list'), 'visible'=>!Yii::app()->user->isGuest),
-					//array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+					array('label'=>'My Class', 'url'=>array('/MyClass'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'My Profile', 'url'=>array('/MyProfile'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'About Us', 'url'=>array('/AboutUs')),
+					array('label'=>'Contact Us', 'url'=>array('/ContactUs')),
 					array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-					array('label'=>'Register', 'url'=>array('/site/register'))
+					array('label'=>'Register', 'url'=>array('/site/register'), 'visible'=>Yii::app()->user->isGuest),
 					
 				),
 			)); ?>

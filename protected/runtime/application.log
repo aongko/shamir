@@ -1372,3 +1372,1266 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/shamir/index.php/LearnModule
 ---
+2013/05/29 11:02:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "MyProfile/site/login".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('MyProfile/site/...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/MyProfile/site/login
+HTTP_REFERER=http://localhost:85/shamir/index.php/MyProfile
+---
+2013/05/29 11:06:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "MyClass/view/list".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('MyClass/view/li...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/MyClass/view/list
+HTTP_REFERER=http://localhost:85/shamir/index.php/MyProfile
+---
+2013/05/29 11:06:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "MyClass/view/list".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('MyClass/view/li...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/MyClass/view/list
+HTTP_REFERER=http://localhost:85/shamir/index.php/MyProfile
+---
+2013/05/29 11:11:01 [error] [exception.CException] exception 'CException' with message 'AboutUsModule and its behaviors do not have a method or closure named "setModuleId".' in E:\workspace\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): CComponent->__call('setModuleId', Array)
+#1 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->setModuleId('About Us')
+#2 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#3 E:\workspace\yii\framework\YiiBase.php(206): CModule->__construct('AboutUs', NULL, Array)
+#4 E:\workspace\yii\framework\base\CModule.php(282): YiiBase::createComponent('AboutUs.AboutUs...', 'AboutUs', NULL, Array)
+#5 E:\workspace\yii\framework\web\CWebApplication.php(337): CModule->getModule('AboutUs')
+#6 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController('AboutUs')
+#7 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('AboutUs')
+#8 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shamir/index.php/AboutUs
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:14:56 [error] [php] Missing argument 1 for CModule::getModule(), called in E:\workspace\yii\framework\base\CComponent.php on line 111 and defined (E:\workspace\yii\framework\base\CModule.php:269)
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->__get()
+#1 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#2 E:\workspace\yii\framework\YiiBase.php(206): AboutUsModule->__construct()
+#3 E:\workspace\yii\framework\base\CModule.php(282): createComponent()
+#4 E:\workspace\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#5 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#6 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/AboutUs
+in E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php (16)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:14:59 [error] [php] Missing argument 1 for CModule::getModule(), called in E:\workspace\yii\framework\base\CComponent.php on line 111 and defined (E:\workspace\yii\framework\base\CModule.php:269)
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->__get()
+#1 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#2 E:\workspace\yii\framework\YiiBase.php(206): AboutUsModule->__construct()
+#3 E:\workspace\yii\framework\base\CModule.php(282): createComponent()
+#4 E:\workspace\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#5 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#6 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/AboutUs
+in E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php (16)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:15:17 [error] [php] Missing argument 1 for CModule::getModule(), called in E:\workspace\yii\framework\base\CComponent.php on line 111 and defined (E:\workspace\yii\framework\base\CModule.php:269)
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->__get()
+#1 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#2 E:\workspace\yii\framework\YiiBase.php(206): AboutUsModule->__construct()
+#3 E:\workspace\yii\framework\base\CModule.php(282): createComponent()
+#4 E:\workspace\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#5 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#6 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/AboutUs
+in E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php (16)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:17:00 [error] [php] Missing argument 1 for CModule::getModule(), called in E:\workspace\yii\framework\base\CComponent.php on line 111 and defined (E:\workspace\yii\framework\base\CModule.php:269)
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->__get()
+#1 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#2 E:\workspace\yii\framework\YiiBase.php(206): AboutUsModule->__construct()
+#3 E:\workspace\yii\framework\base\CModule.php(282): createComponent()
+#4 E:\workspace\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#5 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#6 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/AboutUs
+in E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php (16)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:17:01 [error] [php] Missing argument 1 for CModule::getModule(), called in E:\workspace\yii\framework\base\CComponent.php on line 111 and defined (E:\workspace\yii\framework\base\CModule.php:269)
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->__get()
+#1 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#2 E:\workspace\yii\framework\YiiBase.php(206): AboutUsModule->__construct()
+#3 E:\workspace\yii\framework\base\CModule.php(282): createComponent()
+#4 E:\workspace\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#5 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#6 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/AboutUs
+in E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php (16)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:17:01 [error] [php] Missing argument 1 for CModule::getModule(), called in E:\workspace\yii\framework\base\CComponent.php on line 111 and defined (E:\workspace\yii\framework\base\CModule.php:269)
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->__get()
+#1 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#2 E:\workspace\yii\framework\YiiBase.php(206): AboutUsModule->__construct()
+#3 E:\workspace\yii\framework\base\CModule.php(282): createComponent()
+#4 E:\workspace\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#5 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#6 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/AboutUs
+in E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php (16)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:17:01 [error] [php] Missing argument 1 for CModule::getModule(), called in E:\workspace\yii\framework\base\CComponent.php on line 111 and defined (E:\workspace\yii\framework\base\CModule.php:269)
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->__get()
+#1 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#2 E:\workspace\yii\framework\YiiBase.php(206): AboutUsModule->__construct()
+#3 E:\workspace\yii\framework\base\CModule.php(282): createComponent()
+#4 E:\workspace\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#5 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#6 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/AboutUs
+in E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php (16)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:17:02 [error] [php] Missing argument 1 for CModule::getModule(), called in E:\workspace\yii\framework\base\CComponent.php on line 111 and defined (E:\workspace\yii\framework\base\CModule.php:269)
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->__get()
+#1 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#2 E:\workspace\yii\framework\YiiBase.php(206): AboutUsModule->__construct()
+#3 E:\workspace\yii\framework\base\CModule.php(282): createComponent()
+#4 E:\workspace\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#5 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#6 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/AboutUs
+in E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php (16)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:17:06 [error] [php] Missing argument 1 for CModule::getModule(), called in E:\workspace\yii\framework\base\CComponent.php on line 111 and defined (E:\workspace\yii\framework\base\CModule.php:269)
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->__get()
+#1 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#2 E:\workspace\yii\framework\YiiBase.php(206): AboutUsModule->__construct()
+#3 E:\workspace\yii\framework\base\CModule.php(282): createComponent()
+#4 E:\workspace\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#5 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#6 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/AboutUs
+in E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php (16)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:17:07 [error] [php] Missing argument 1 for CModule::getModule(), called in E:\workspace\yii\framework\base\CComponent.php on line 111 and defined (E:\workspace\yii\framework\base\CModule.php:269)
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->__get()
+#1 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#2 E:\workspace\yii\framework\YiiBase.php(206): AboutUsModule->__construct()
+#3 E:\workspace\yii\framework\base\CModule.php(282): createComponent()
+#4 E:\workspace\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#5 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#6 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/AboutUs
+in E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php (16)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:17:53 [error] [php] Missing argument 1 for CModule::getModule(), called in E:\workspace\yii\framework\base\CComponent.php on line 111 and defined (E:\workspace\yii\framework\base\CModule.php:269)
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php(16): AboutUsModule->__get()
+#1 E:\workspace\yii\framework\base\CModule.php(90): AboutUsModule->init()
+#2 E:\workspace\yii\framework\YiiBase.php(206): AboutUsModule->__construct()
+#3 E:\workspace\yii\framework\base\CModule.php(282): createComponent()
+#4 E:\workspace\yii\framework\web\CWebApplication.php(337): CWebApplication->getModule()
+#5 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#6 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/AboutUs
+in E:\workspace\web\shamir\protected\modules\AboutUs\AboutUsModule.php (16)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:23:47 [error] [php] Undefined variable: model (E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php:45)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#1 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#2 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(8): DefaultController->render()
+#3 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#4 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#6 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#7 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (45)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (8)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 11:24:34 [error] [exception.CException] exception 'CException' with message 'CCaptchaValidator.action "captcha" is invalid. Unable to find such an action in the current controller.' in E:\workspace\yii\framework\validators\CCaptchaValidator.php:75
+Stack trace:
+#0 E:\workspace\yii\framework\validators\CCaptchaValidator.php(91): CCaptchaValidator->getCaptchaAction()
+#1 E:\workspace\yii\framework\web\widgets\CActiveForm.php(479): CCaptchaValidator->clientValidateAttribute(Object(ContactForm), 'verifyCode')
+#2 E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php(80): CActiveForm->error(Object(ContactForm), 'verifyCode')
+#3 E:\workspace\yii\framework\web\CBaseController.php(126): require('E:\workspace\we...')
+#4 E:\workspace\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\workspace\we...', Array, true)
+#5 E:\workspace\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\workspace\we...', Array, true)
+#6 E:\workspace\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#7 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(28): CController->render('index', Array)
+#8 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#9 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\workspace\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 E:\workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\workspace\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ContactUs')
+#14 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/shamir/index.php/ContactUs
+HTTP_REFERER=http://localhost:85/shamir/index.php/AboutUs
+---
+2013/05/29 11:24:35 [error] [exception.CException] exception 'CException' with message 'CCaptchaValidator.action "captcha" is invalid. Unable to find such an action in the current controller.' in E:\workspace\yii\framework\validators\CCaptchaValidator.php:75
+Stack trace:
+#0 E:\workspace\yii\framework\validators\CCaptchaValidator.php(91): CCaptchaValidator->getCaptchaAction()
+#1 E:\workspace\yii\framework\web\widgets\CActiveForm.php(479): CCaptchaValidator->clientValidateAttribute(Object(ContactForm), 'verifyCode')
+#2 E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php(80): CActiveForm->error(Object(ContactForm), 'verifyCode')
+#3 E:\workspace\yii\framework\web\CBaseController.php(126): require('E:\workspace\we...')
+#4 E:\workspace\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\workspace\we...', Array, true)
+#5 E:\workspace\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\workspace\we...', Array, true)
+#6 E:\workspace\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#7 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(28): CController->render('index', Array)
+#8 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#9 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\workspace\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 E:\workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\workspace\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ContactUs')
+#14 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/shamir/index.php/ContactUs
+HTTP_REFERER=http://localhost:85/shamir/index.php/AboutUs
+---
+2013/05/29 11:25:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5c99ab5b58".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5c99ab5b58
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:26:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/refresh/1".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/refresh/1?_=1369819577191
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:26:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5c9e2f0972".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5c9e2f0972
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:27:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5ca119a0ae".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5ca119a0ae
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs/Default
+---
+2013/05/29 11:27:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Captcha".' in E:\workspace\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\workspace\yii\framework\web\CController.php(270): CController->missingAction('Captcha')
+#1 E:\workspace\yii\framework\web\CWebApplication.php(282): CController->run('Captcha')
+#2 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ContactUs/Defau...')
+#3 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shamir/index.php/ContactUs/Default/Captcha
+---
+2013/05/29 11:27:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5ca1e1a32a".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5ca1e1a32a
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs/Default/
+---
+2013/05/29 11:28:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5ca20de886".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5ca20de886
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs/Default/index
+---
+2013/05/29 11:28:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexa".' in E:\workspace\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\workspace\yii\framework\web\CController.php(270): CController->missingAction('indexa')
+#1 E:\workspace\yii\framework\web\CWebApplication.php(282): CController->run('indexa')
+#2 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ContactUs/Defau...')
+#3 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/shamir/index.php/ContactUs/Default/indexa
+---
+2013/05/29 11:28:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5ca26a6efe".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5ca26a6efe
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs/Default/index
+---
+2013/05/29 11:28:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5ca352ecf3".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5ca352ecf3
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs/default/index
+---
+2013/05/29 11:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/refresh/1".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/refresh/1?_=1369819741453
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs/default/index
+---
+2013/05/29 11:33:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5cb7b46b9a".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5cb7b46b9a
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs/
+---
+2013/05/29 11:35:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5cbeab5046".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5cbeab5046
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs/
+---
+2013/05/29 11:36:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5cc2ce48a0".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5cc2ce48a0
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs/
+---
+2013/05/29 11:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5cc8b31820".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5cc8b31820
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:53:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d009a3b33".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d009a3b33
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:54:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d05a2e8fe".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d05a2e8fe
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d079d9423".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d079d9423
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07af0b13".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07af0b13
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07bbcd06".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07bbcd06
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07c23e42".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07c23e42
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07c572ec".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07c572ec
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07c984d3".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07c984d3
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07ccd2f5".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07ccd2f5
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07d08d66".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07d08d66
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07d60211".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07d60211
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07d8e05a".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07d8e05a
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07dbd22b".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07dbd22b
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07dea8ea".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07dea8ea
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07e21df5".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07e21df5
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07e4d21b".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07e4d21b
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07e7b0a8".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07e7b0a8
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07ea2fb9".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07ea2fb9
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07ed725d".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07ed725d
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07f0f724".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07f0f724
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07f3a1b2".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07f3a1b2
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07f664d5".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07f664d5
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07f9358a".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07f9358a
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d07fbf82b".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d07fbf82b
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d0801faf0".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d0801faf0
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d080553a4".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d080553a4
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d0808b87c".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d0808b87c
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d080b4cba".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d080b4cba
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d080dc8b1".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d080dc8b1
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d08115e53".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d08115e53
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d08142978".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d08142978
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d0816ec57".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d0816ec57
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d0816ec57".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d0816ec57
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d081a824b".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d081a824b
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d081cb43e".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d081cb43e
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d081f3677".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d081f3677
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d0822ad0c".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d0822ad0c
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d0825bb7e".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d0825bb7e
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d0828bbdc".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d0828bbdc
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d082bac59".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d082bac59
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d084457ee".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d084457ee
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 11:55:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d0a49fb2e".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d0a49fb2e
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 12:00:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d1d3365f3".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d1d3365f3
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 12:01:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d2010fb68".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d2010fb68
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 12:01:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d20a74f0f".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d20a74f0f
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 12:01:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d20b22829".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d20b22829
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 12:01:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d20fcf834".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d20fcf834
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 12:02:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d2192b5a7".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d2192b5a7
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 12:08:26 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in E:\workspace\yii\framework\YiiBase.php:193
+Stack trace:
+#0 E:\workspace\yii\framework\web\CController.php(440): YiiBase::createComponent(Array, Object(SiteController), 'captcha')
+#1 E:\workspace\yii\framework\web\CController.php(417): CController->createActionFromMap(Array, 'captcha', 'captcha')
+#2 E:\workspace\yii\framework\validators\CCaptchaValidator.php(64): CController->createAction('captcha')
+#3 E:\workspace\yii\framework\validators\CCaptchaValidator.php(91): CCaptchaValidator->getCaptchaAction()
+#4 E:\workspace\yii\framework\web\widgets\CActiveForm.php(479): CCaptchaValidator->clientValidateAttribute(Object(ContactForm), 'verifyCode')
+#5 E:\workspace\web\shamir\protected\views\site\contact.php(73): CActiveForm->error(Object(ContactForm), 'verifyCode')
+#6 E:\workspace\yii\framework\web\CBaseController.php(126): require('E:\workspace\we...')
+#7 E:\workspace\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\workspace\we...', Array, true)
+#8 E:\workspace\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\workspace\we...', Array, true)
+#9 E:\workspace\yii\framework\web\CController.php(782): CController->renderPartial('contact', Array, true)
+#10 E:\workspace\web\shamir\protected\controllers\SiteController.php(121): CController->render('contact', Array)
+#11 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionContact()
+#12 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 E:\workspace\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 E:\workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 E:\workspace\yii\framework\web\CWebApplication.php(282): CController->run('contact')
+#16 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/contact')
+#17 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/shamir/index.php/site/contact
+---
+2013/05/29 12:08:34 [error] [php] include(CCaptchaActiona.php): failed to open stream: No such file or directory (E:\workspace\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 E:\workspace\yii\framework\YiiBase.php(196): import()
+#1 E:\workspace\yii\framework\web\CController.php(440): createComponent()
+#2 E:\workspace\yii\framework\web\CController.php(417): SiteController->createActionFromMap()
+#3 E:\workspace\yii\framework\validators\CCaptchaValidator.php(64): SiteController->createAction()
+#4 E:\workspace\yii\framework\validators\CCaptchaValidator.php(91): CCaptchaValidator->getCaptchaAction()
+#5 E:\workspace\yii\framework\web\widgets\CActiveForm.php(479): CCaptchaValidator->clientValidateAttribute()
+#6 E:\workspace\web\shamir\protected\views\site\contact.php(73): CActiveForm->error()
+#7 E:\workspace\yii\framework\web\CBaseController.php(126): require()
+#8 E:\workspace\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 E:\workspace\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 E:\workspace\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 E:\workspace\web\shamir\protected\controllers\SiteController.php(121): SiteController->render()
+#12 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionContact()
+#13 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 E:\workspace\yii\framework\web\CController.php(286): SiteController->runAction()
+#15 E:\workspace\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 E:\workspace\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#17 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/site/contact
+in E:\workspace\web\shamir\protected\views\site\contact.php (73)
+in E:\workspace\web\shamir\protected\controllers\SiteController.php (121)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:08:44 [error] [php] include(CCaptchaActions.php): failed to open stream: No such file or directory (E:\workspace\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 E:\workspace\yii\framework\YiiBase.php(196): import()
+#1 E:\workspace\yii\framework\web\CController.php(440): createComponent()
+#2 E:\workspace\yii\framework\web\CController.php(417): DefaultController->createActionFromMap()
+#3 E:\workspace\yii\framework\validators\CCaptchaValidator.php(64): DefaultController->createAction()
+#4 E:\workspace\yii\framework\validators\CCaptchaValidator.php(91): CCaptchaValidator->getCaptchaAction()
+#5 E:\workspace\yii\framework\web\widgets\CActiveForm.php(479): CCaptchaValidator->clientValidateAttribute()
+#6 E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php(81): CActiveForm->error()
+#7 E:\workspace\yii\framework\web\CBaseController.php(126): require()
+#8 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#10 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(48): DefaultController->render()
+#12 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#15 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (81)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (48)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:08:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d3bb6f4ef".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d3bb6f4ef
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 12:11:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Contact Us/default/captcha/v/51a5d43567cb3".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Contact Us/defa...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/index.php/Contact%20Us/default/captcha/v/51a5d43567cb3
+HTTP_REFERER=http://localhost:85/shamir/index.php/ContactUs
+---
+2013/05/29 12:38:09 [error] [exception.CException] exception 'CException' with message 'DefaultController and its behaviors do not have a method or closure named "getController".' in E:\workspace\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php(85): CComponent->__call('getController', Array)
+#1 E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php(85): DefaultController->getController()
+#2 E:\workspace\yii\framework\web\CBaseController.php(126): require('E:\workspace\we...')
+#3 E:\workspace\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\workspace\we...', Array, true)
+#4 E:\workspace\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\workspace\we...', Array, true)
+#5 E:\workspace\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): CController->render('index', Array)
+#7 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#8 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 E:\workspace\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 E:\workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\workspace\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ContactUs')
+#13 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/shamir/index.php/ContactUs
+HTTP_REFERER=http://localhost:85/shamir/index.php/site/contact
+---
+2013/05/29 12:38:21 [error] [exception.CException] exception 'CException' with message 'Property "DefaultController.captchaAction" is not defined.' in E:\workspace\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php(85): CComponent->__get('captchaAction')
+#1 E:\workspace\yii\framework\web\CBaseController.php(126): require('E:\workspace\we...')
+#2 E:\workspace\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\workspace\we...', Array, true)
+#3 E:\workspace\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\workspace\we...', Array, true)
+#4 E:\workspace\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#5 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): CController->render('index', Array)
+#6 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#7 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\workspace\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 E:\workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\workspace\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ContactUs')
+#12 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/shamir/index.php/ContactUs
+HTTP_REFERER=http://localhost:85/shamir/index.php/site/contact
+---
+2013/05/29 12:39:25 [error] [php] Undefined variable: CCaptchaAction (E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php:85)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#1 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#2 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#3 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#4 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#6 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#7 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:39:38 [error] [php] Non-static method CCaptchaAction::run() should not be called statically, assuming $this from incompatible context (E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php:85)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#1 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#2 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#3 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#4 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#6 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#7 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:39:39 [error] [php] Non-static method CCaptchaAction::run() should not be called statically, assuming $this from incompatible context (E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php:85)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#1 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#2 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#3 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#4 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#6 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#7 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:39:39 [error] [php] Non-static method CCaptchaAction::run() should not be called statically, assuming $this from incompatible context (E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php:85)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#1 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#2 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#3 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#4 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#6 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#7 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:39:40 [error] [php] Non-static method CCaptchaAction::run() should not be called statically, assuming $this from incompatible context (E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php:85)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#1 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#2 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#3 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#4 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#6 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#7 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:01 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:07 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:07 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:08 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:08 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:08 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:08 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:09 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:09 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:09 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:10 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
+2013/05/29 12:40:10 [error] [php] Missing argument 1 for CAction::__construct(), called in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php on line 85 and defined (E:\workspace\yii\framework\web\actions\CAction.php:41)
+Stack trace:
+#0 E:\workspace\yii\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#1 E:\workspace\yii\framework\web\CController.php(869): DefaultController->renderFile()
+#2 E:\workspace\yii\framework\web\CController.php(782): DefaultController->renderPartial()
+#3 E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php(49): DefaultController->render()
+#4 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\yii\framework\web\CController.php(286): DefaultController->runAction()
+#7 E:\workspace\yii\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 E:\workspace\yii\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\workspace\web\shamir\index.php(13): CWebApplication->run()
+REQUEST_URI=/shamir/index.php/ContactUs
+in E:\workspace\web\shamir\protected\modules\ContactUs\views\default\index.php (85)
+in E:\workspace\web\shamir\protected\modules\ContactUs\controllers\DefaultController.php (49)
+in E:\workspace\web\shamir\index.php (13)
