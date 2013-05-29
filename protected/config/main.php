@@ -64,7 +64,7 @@ return array(
 			//'connectionString' => 'mysql:host=mysql.idhostinger.com;dbname=u458029473_psbd',
 			'connectionString' => 'mysql:host=localhost;dbname=shamir',
 			'emulatePrepare' => true,
-			'username' => 'shamir',
+			'username' => 'root',
 			'password' => 'projectsbd',
 			'charset' => 'utf8',
 		),
