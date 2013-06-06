@@ -23,9 +23,6 @@ class DefaultController extends Controller
 	
 	public function actionIndex()
 	{
-		//$this->module->setId('ContactUs');
-		//$this->render('index');
-
 		$model=new ContactForm;
 
 		if(isset($_POST['ContactForm']))

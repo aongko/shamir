@@ -28,12 +28,14 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+		/*
 		'Learn',
+		
 		'MyClass',
 		'MyProfile',
 		'AboutUs',
 		'ContactUs',
-		
+		*/
 	),
 
 	// application components
@@ -51,6 +53,7 @@ return array(
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
+			'showScriptName'=>false,
 		),
 		
 		/*
@@ -64,7 +67,7 @@ return array(
 			//'connectionString' => 'mysql:host=mysql.idhostinger.com;dbname=u458029473_psbd',
 			'connectionString' => 'mysql:host=localhost;dbname=shamir',
 			'emulatePrepare' => true,
-			'username' => 'root',
+			'username' => 'shamir',
 			'password' => 'projectsbd',
 			'charset' => 'utf8',
 		),

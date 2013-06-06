@@ -35,7 +35,7 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 				'items'=>array(
 					array('label'=>'Home', 'url'=>array('/site/index')),
-					array('label'=>'Learn', 'url'=>array('/Learn'),
+					array('label'=>'Learn', 'url'=>array('/learn/index'),
 						'itemOptions'=>array('class'=>'has-sub'),
 						'items'=>array(
 							array('label'=>'Matematika', 'url'=>'#'),
@@ -44,9 +44,9 @@
 						)
 					),
 					array('label'=>'My Class', 'url'=>array('/MyClass'), 'visible'=>!Yii::app()->user->isGuest),
-					array('label'=>'My Profile', 'url'=>array('/MyProfile'), 'visible'=>!Yii::app()->user->isGuest),
-					array('label'=>'About Us', 'url'=>array('/AboutUs')),
-					array('label'=>'Contact Us', 'url'=>array('/ContactUs')),
+					array('label'=>'My Profile', 'url'=>array('/site/myProfile'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'About Us', 'url'=>array('/site/aboutUs')),
+					array('label'=>'Contact Us', 'url'=>array('/site/contact')),
 					array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
 					array('label'=>'Register', 'url'=>array('/site/register'), 'visible'=>Yii::app()->user->isGuest),
 					
