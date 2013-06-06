@@ -43,6 +43,9 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+			'authTimeout'=>3600*1, // 1 hour
+			//'loginUrl'=>,
+			//'returnUrl'=>Yii::app()->request->baseUrl,
 		),
 		// uncomment the following to enable URLs in path-format
 		
