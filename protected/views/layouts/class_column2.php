@@ -10,7 +10,7 @@
 	<?php
 		if (!empty($this->menuStudentOperation)) {
 			$this->beginWidget('zii.widgets.CPortlet', array(
-				'title'=>$this->module->classId,
+				'title'=>MsClass::model()->findByPk($this->module->classId)->class_name,
 			));
 			$this->widget('zii.widgets.CMenu', array(
 				'items'=>$this->menuStudentOperation,
@@ -21,7 +21,7 @@
 		
 		if (!empty($this->menuLecturerOperation)) {
 			$this->beginWidget('zii.widgets.CPortlet', array(
-				'title'=>'lecturerOperation',
+				'title'=>'Lecturer Tools',
 			));
 			$this->widget('zii.widgets.CMenu', array(
 				'items'=>$this->menuLecturerOperation,

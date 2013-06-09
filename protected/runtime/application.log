@@ -4225,3 +4225,56 @@ Stack trace:
 REQUEST_URI=/shamir/class/2/student/home
 HTTP_REFERER=http://localhost/shamir/site/myClass
 ---
+2013/06/09 14:38:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "myClass".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('myClass')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/myClass
+---
+2013/06/09 14:46:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "class/student/video".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('class/student/v...')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/class/1/student/video
+HTTP_REFERER=http://localhost/shamir/class/1/student/home
+---
+2013/06/09 14:46:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "class/student/additionalMaterial".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('class/student/a...')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/class/1/student/additionalMaterial
+HTTP_REFERER=http://localhost/shamir/class/1/student/home
+---
+2013/06/09 14:46:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "class/student/forum".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('class/student/f...')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/class/1/student/forum
+HTTP_REFERER=http://localhost/shamir/class/1/student/home
+---
+2013/06/09 14:47:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "class/student/assignment".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('class/student/a...')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/class/1/student/assignment
+HTTP_REFERER=http://localhost/shamir/class/1/student/home
+---
+2013/06/09 14:47:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "class/lecturer/home".' in /opt/lampp/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('class/lecturer/...')
+#1 /opt/lampp/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/shamir/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/class/1/lecturer/home
+HTTP_REFERER=http://localhost/shamir/class/1/student/home
+---
