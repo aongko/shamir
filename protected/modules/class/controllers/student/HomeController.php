@@ -4,7 +4,9 @@ class HomeController extends ClassController
 {
 	public function actionIndex()
 	{
-		echo $this->module->classId;
-		$this->render('index');
+		$model = new TrPost('search');
+		$model->class_id = $this->module->classId;
+		$model->status_record = 'A';
+		$this->render('index', array('model'=>$model));
 	}
 }
