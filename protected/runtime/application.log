@@ -4278,3 +4278,147 @@ Stack trace:
 REQUEST_URI=/shamir/class/1/lecturer/home
 HTTP_REFERER=http://localhost/shamir/class/1/student/home
 ---
+2013/06/09 15:05:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/styles.css".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/styles.css
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:05:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/jquery.yiilistview.js".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/jquery.yiilistview.js
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:08:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/styles.css".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/styles.css
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:08:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/jquery.yiilistview.js".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/jquery.yiilistview.js
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:08:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/styles.css".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/styles.css
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:08:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/jquery.yiilistview.js".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/jquery.yiilistview.js
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:09:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/jquery.yiilistview.js".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/jquery.yiilistview.js
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:09:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/styles.css".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/styles.css
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:10:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/jquery.yiilistview.js".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/jquery.yiilistview.js
+HTTP_REFERER=http://localhost:85/shamir/learn/index?MsClass_sort=class_name
+---
+2013/06/09 15:10:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/styles.css".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/styles.css
+HTTP_REFERER=http://localhost:85/shamir/learn/index?MsClass_sort=class_name
+---
+2013/06/09 15:10:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/styles.css".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/styles.css
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:10:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/jquery.yiilistview.js".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/jquery.yiilistview.js
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:10:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/jquery.yiilistview.js".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/jquery.yiilistview.js
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:10:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/styles.css".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/styles.css
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:11:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/styles.css".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/styles.css
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
+2013/06/09 15:11:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/6d7359be/listview/jquery.yiilistview.js".' in E:\workspace\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/6d7359be...')
+#1 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shamir/assets/6d7359be/listview/jquery.yiilistview.js
+HTTP_REFERER=http://localhost:85/shamir/learn/index
+---
