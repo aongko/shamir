@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "master_profile".
+ * This is the model class for table "ms_profile".
  *
- * The followings are the available columns in table 'master_profile':
+ * The followings are the available columns in table 'ms_profile':
  * @property integer $profile_id
  * @property string $first_name
  * @property string $middle_name
@@ -21,15 +21,15 @@
  * @property string $status_record
  *
  * The followings are the available model relations:
- * @property MasterAccount[] $masterAccounts
- * @property MasterCity $city
+ * @property MsAccount[] $msAccounts
+ * @property LtCity $city
  */
-class MasterProfile extends CActiveRecord
+class MsProfile extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return MasterProfile the static model class
+	 * @return MsProfile the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -41,7 +41,7 @@ class MasterProfile extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'master_profile';
+		return 'ms_profile';
 	}
 
 	/**
@@ -61,7 +61,7 @@ class MasterProfile extends CActiveRecord
 			array('input_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('profile_id, first_name, middle_name, last_name, date_of_birth, phone1, phone2, address, email1, email2, city_id, motto', 'safe', 'on'=>'search'),
+			array('profile_id, first_name, middle_name, last_name, date_of_birth, phone1, phone2, address, email1, email2, city_id, motto, user_input, input_date, status_record', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,8 +73,8 @@ class MasterProfile extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'masterAccounts' => array(self::HAS_MANY, 'MasterAccount', 'profile_id'),
-			'city' => array(self::BELONGS_TO, 'MasterCity', 'city_id'),
+			'msAccounts' => array(self::HAS_MANY, 'MsAccount', 'profile_id'),
+			'city' => array(self::BELONGS_TO, 'LtCity', 'city_id'),
 		);
 	}
 
@@ -125,6 +125,9 @@ class MasterProfile extends CActiveRecord
 		$criteria->compare('email2',$this->email2,true);
 		$criteria->compare('city_id',$this->city_id);
 		$criteria->compare('motto',$this->motto,true);
+		$criteria->compare('user_input',$this->user_input,true);
+		$criteria->compare('input_date',$this->input_date,true);
+		$criteria->compare('status_record',$this->status_record,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

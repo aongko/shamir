@@ -1,28 +1,34 @@
 <?php
 
 /**
- * This is the model class for table "master_discussion_category".
+ * This is the model class for table "tr_rating".
  *
- * The followings are the available columns in table 'master_discussion_category':
- * @property integer $discussion_category_id
- * @property string $discussion_category_name
- * @property integer $parent_id
+ * The followings are the available columns in table 'tr_rating':
+ * @property integer $rating_id
+ * @property integer $account_id
+ * @property integer $star
+ * @property string $rate_date
  * @property string $user_input
  * @property string $input_date
  * @property string $status_record
+ * @property integer $class_id
+ * @property integer $session_id
+ * @property integer $post_id
+ * @property integer $video_id
  *
  * The followings are the available model relations:
- * @property MasterDiscussionCategory $parent
- * @property MasterDiscussionCategory[] $masterDiscussionCategories
- * @property TrForumDiscussion[] $trForumDiscussions
- * @property TrPriviledge[] $trPriviledges
+ * @property TrVideo $video
+ * @property MsAccount $account
+ * @property MsClass $class
+ * @property MsSession $session
+ * @property TrPost $post
  */
-class MasterDiscussionCategory extends CActiveRecord
+class TrRating extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return MasterDiscussionCategory the static model class
+	 * @return TrRating the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -34,7 +40,7 @@ class MasterDiscussionCategory extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'master_discussion_category';
+		return 'tr_rating';
 	}
 
 	/**
@@ -45,14 +51,14 @@ class MasterDiscussionCategory extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('discussion_category_name', 'required'),
-			array('parent_id', 'numerical', 'integerOnly'=>true),
-			array('discussion_category_name, user_input', 'length', 'max'=>50),
+			array('account_id, star, rate_date', 'required'),
+			array('account_id, star, class_id, session_id, post_id, video_id', 'numerical', 'integerOnly'=>true),
+			array('user_input', 'length', 'max'=>50),
 			array('status_record', 'length', 'max'=>1),
 			array('input_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('discussion_category_id, discussion_category_name, parent_id, user_input, input_date, status_record', 'safe', 'on'=>'search'),
+			array('rating_id, account_id, star, rate_date, user_input, input_date, status_record, class_id, session_id, post_id, video_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,10 +70,11 @@ class MasterDiscussionCategory extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'parent' => array(self::BELONGS_TO, 'MasterDiscussionCategory', 'parent_id'),
-			'masterDiscussionCategories' => array(self::HAS_MANY, 'MasterDiscussionCategory', 'parent_id'),
-			'trForumDiscussions' => array(self::HAS_MANY, 'TrForumDiscussion', 'discussion_category_id'),
-			'trPriviledges' => array(self::HAS_MANY, 'TrPriviledge', 'discussion_category_id'),
+			'video' => array(self::BELONGS_TO, 'TrVideo', 'video_id'),
+			'account' => array(self::BELONGS_TO, 'MsAccount', 'account_id'),
+			'class' => array(self::BELONGS_TO, 'MsClass', 'class_id'),
+			'session' => array(self::BELONGS_TO, 'MsSession', 'session_id'),
+			'post' => array(self::BELONGS_TO, 'TrPost', 'post_id'),
 		);
 	}
 
@@ -77,12 +84,17 @@ class MasterDiscussionCategory extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'discussion_category_id' => 'Discussion Category',
-			'discussion_category_name' => 'Discussion Category Name',
-			'parent_id' => 'Parent',
+			'rating_id' => 'Rating',
+			'account_id' => 'Account',
+			'star' => 'Star',
+			'rate_date' => 'Rate Date',
 			'user_input' => 'User Input',
 			'input_date' => 'Input Date',
 			'status_record' => 'Status Record',
+			'class_id' => 'Class',
+			'session_id' => 'Session',
+			'post_id' => 'Post',
+			'video_id' => 'Video',
 		);
 	}
 
@@ -97,12 +109,17 @@ class MasterDiscussionCategory extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('discussion_category_id',$this->discussion_category_id);
-		$criteria->compare('discussion_category_name',$this->discussion_category_name,true);
-		$criteria->compare('parent_id',$this->parent_id);
+		$criteria->compare('rating_id',$this->rating_id);
+		$criteria->compare('account_id',$this->account_id);
+		$criteria->compare('star',$this->star);
+		$criteria->compare('rate_date',$this->rate_date,true);
 		$criteria->compare('user_input',$this->user_input,true);
 		$criteria->compare('input_date',$this->input_date,true);
 		$criteria->compare('status_record',$this->status_record,true);
+		$criteria->compare('class_id',$this->class_id);
+		$criteria->compare('session_id',$this->session_id);
+		$criteria->compare('post_id',$this->post_id);
+		$criteria->compare('video_id',$this->video_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

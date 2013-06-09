@@ -5,20 +5,19 @@
  *
  * The followings are the available columns in table 'tr_video':
  * @property integer $video_id
- * @property string $video_url
  * @property string $video_name
- * @property integer $post_id
- * @property integer $session_id
- * @property integer $assignment_id
+ * @property string $video_url
+ * @property integer $added_by
+ * @property string $added_date
  * @property string $user_input
  * @property string $input_date
  * @property string $status_record
+ * @property integer $session_id
  *
  * The followings are the available model relations:
- * @property MasterSession $session
- * @property TrAssignment $assignment
- * @property TrPost $post
- * @property MasterAccount[] $masterAccounts
+ * @property TrRating[] $trRatings
+ * @property MsSession $session
+ * @property MsAccount $addedBy
  */
 class TrVideo extends CActiveRecord
 {
@@ -48,15 +47,15 @@ class TrVideo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('video_url, video_name', 'required'),
-			array('post_id, session_id, assignment_id', 'numerical', 'integerOnly'=>true),
-			array('video_url', 'length', 'max'=>200),
+			array('video_name, video_url, added_by, added_date', 'required'),
+			array('added_by, session_id', 'numerical', 'integerOnly'=>true),
 			array('video_name, user_input', 'length', 'max'=>50),
+			array('video_url', 'length', 'max'=>250),
 			array('status_record', 'length', 'max'=>1),
 			array('input_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('video_id, video_url, video_name, post_id, session_id, assignment_id, user_input, input_date, status_record', 'safe', 'on'=>'search'),
+			array('video_id, video_name, video_url, added_by, added_date, user_input, input_date, status_record, session_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,10 +67,9 @@ class TrVideo extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'session' => array(self::BELONGS_TO, 'MasterSession', 'session_id'),
-			'assignment' => array(self::BELONGS_TO, 'TrAssignment', 'assignment_id'),
-			'post' => array(self::BELONGS_TO, 'TrPost', 'post_id'),
-			'masterAccounts' => array(self::MANY_MANY, 'MasterAccount', 'tr_video_rating(video_id, account_id)'),
+			'trRatings' => array(self::HAS_MANY, 'TrRating', 'video_id'),
+			'session' => array(self::BELONGS_TO, 'MsSession', 'session_id'),
+			'addedBy' => array(self::BELONGS_TO, 'MsAccount', 'added_by'),
 		);
 	}
 
@@ -82,14 +80,14 @@ class TrVideo extends CActiveRecord
 	{
 		return array(
 			'video_id' => 'Video',
-			'video_url' => 'Video Url',
 			'video_name' => 'Video Name',
-			'post_id' => 'Post',
-			'session_id' => 'Session',
-			'assignment_id' => 'Assignment',
+			'video_url' => 'Video Url',
+			'added_by' => 'Added By',
+			'added_date' => 'Added Date',
 			'user_input' => 'User Input',
 			'input_date' => 'Input Date',
 			'status_record' => 'Status Record',
+			'session_id' => 'Session',
 		);
 	}
 
@@ -105,14 +103,14 @@ class TrVideo extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('video_id',$this->video_id);
-		$criteria->compare('video_url',$this->video_url,true);
 		$criteria->compare('video_name',$this->video_name,true);
-		$criteria->compare('post_id',$this->post_id);
-		$criteria->compare('session_id',$this->session_id);
-		$criteria->compare('assignment_id',$this->assignment_id);
+		$criteria->compare('video_url',$this->video_url,true);
+		$criteria->compare('added_by',$this->added_by);
+		$criteria->compare('added_date',$this->added_date,true);
 		$criteria->compare('user_input',$this->user_input,true);
 		$criteria->compare('input_date',$this->input_date,true);
 		$criteria->compare('status_record',$this->status_record,true);
+		$criteria->compare('session_id',$this->session_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

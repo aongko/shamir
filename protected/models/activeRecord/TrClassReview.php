@@ -1,31 +1,28 @@
 <?php
 
 /**
- * This is the model class for table "tr_priviledge".
+ * This is the model class for table "tr_class_review".
  *
- * The followings are the available columns in table 'tr_priviledge':
- * @property integer $priviledge_id
- * @property integer $menu_id
- * @property integer $discussion_id
- * @property integer $discussion_category_id
+ * The followings are the available columns in table 'tr_class_review':
+ * @property integer $class_review_id
+ * @property integer $class_id
  * @property integer $account_id
+ * @property string $created_date
+ * @property string $content
  * @property string $user_input
  * @property string $input_date
  * @property string $status_record
- * @property integer $user_type_id
  *
  * The followings are the available model relations:
- * @property MasterAccount $account
- * @property MasterDiscussionCategory $discussionCategory
- * @property MasterMenu $menu
- * @property TrForumDiscussion $discussion
+ * @property MsClass $class
+ * @property MsAccount $account
  */
-class TrPriviledge extends CActiveRecord
+class TrClassReview extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return TrPriviledge the static model class
+	 * @return TrClassReview the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -37,7 +34,7 @@ class TrPriviledge extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'tr_priviledge';
+		return 'tr_class_review';
 	}
 
 	/**
@@ -48,13 +45,15 @@ class TrPriviledge extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('menu_id, discussion_id, discussion_category_id, account_id, user_type_id', 'numerical', 'integerOnly'=>true),
+			array('class_id, account_id, created_date, content', 'required'),
+			array('class_id, account_id', 'numerical', 'integerOnly'=>true),
+			array('content', 'length', 'max'=>250),
 			array('user_input', 'length', 'max'=>50),
 			array('status_record', 'length', 'max'=>1),
 			array('input_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('priviledge_id, menu_id, discussion_id, discussion_category_id, account_id, user_input, input_date, status_record, user_type_id', 'safe', 'on'=>'search'),
+			array('class_review_id, class_id, account_id, created_date, content, user_input, input_date, status_record', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,10 +65,8 @@ class TrPriviledge extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'account' => array(self::BELONGS_TO, 'MasterAccount', 'account_id'),
-			'discussionCategory' => array(self::BELONGS_TO, 'MasterDiscussionCategory', 'discussion_category_id'),
-			'menu' => array(self::BELONGS_TO, 'MasterMenu', 'menu_id'),
-			'discussion' => array(self::BELONGS_TO, 'TrForumDiscussion', 'discussion_id'),
+			'class' => array(self::BELONGS_TO, 'MsClass', 'class_id'),
+			'account' => array(self::BELONGS_TO, 'MsAccount', 'account_id'),
 		);
 	}
 
@@ -79,15 +76,14 @@ class TrPriviledge extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'priviledge_id' => 'Priviledge',
-			'menu_id' => 'Menu',
-			'discussion_id' => 'Discussion',
-			'discussion_category_id' => 'Discussion Category',
+			'class_review_id' => 'Class Review',
+			'class_id' => 'Class',
 			'account_id' => 'Account',
+			'created_date' => 'Created Date',
+			'content' => 'Content',
 			'user_input' => 'User Input',
 			'input_date' => 'Input Date',
 			'status_record' => 'Status Record',
-			'user_type_id' => 'User Type',
 		);
 	}
 
@@ -102,15 +98,14 @@ class TrPriviledge extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('priviledge_id',$this->priviledge_id);
-		$criteria->compare('menu_id',$this->menu_id);
-		$criteria->compare('discussion_id',$this->discussion_id);
-		$criteria->compare('discussion_category_id',$this->discussion_category_id);
+		$criteria->compare('class_review_id',$this->class_review_id);
+		$criteria->compare('class_id',$this->class_id);
 		$criteria->compare('account_id',$this->account_id);
+		$criteria->compare('created_date',$this->created_date,true);
+		$criteria->compare('content',$this->content,true);
 		$criteria->compare('user_input',$this->user_input,true);
 		$criteria->compare('input_date',$this->input_date,true);
 		$criteria->compare('status_record',$this->status_record,true);
-		$criteria->compare('user_type_id',$this->user_type_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -1,34 +1,36 @@
 <?php
 
 /**
- * This is the model class for table "master_session".
+ * This is the model class for table "ms_class".
  *
- * The followings are the available columns in table 'master_session':
- * @property integer $session_id
+ * The followings are the available columns in table 'ms_class':
  * @property integer $class_id
- * @property string $session_name
- * @property integer $session_number
- * @property string $front_image
+ * @property string $class_name
+ * @property integer $class_category_id
+ * @property integer $max_capacity
  * @property string $description
- * @property string $content
  * @property string $date_start
  * @property string $date_end
+ * @property integer $lecturer_id
+ * @property string $front_image
  * @property string $user_input
  * @property string $input_date
  * @property string $status_record
  *
  * The followings are the available model relations:
- * @property MasterClass $class
- * @property TrAssignment[] $trAssignments
- * @property TrDocs[] $trDocs
- * @property TrVideo[] $trVideos
+ * @property LtClassCategory $classCategory
+ * @property MsAccount $lecturer
+ * @property MsSession[] $msSessions
+ * @property TrClassReview[] $trClassReviews
+ * @property TrPost[] $trPosts
+ * @property TrRating[] $trRatings
  */
-class MasterSession extends CActiveRecord
+class MsClass extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return MasterSession the static model class
+	 * @return MsClass the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -40,7 +42,7 @@ class MasterSession extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'master_session';
+		return 'ms_class';
 	}
 
 	/**
@@ -51,14 +53,15 @@ class MasterSession extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('class_id, session_name, session_number, front_image, description, content', 'required'),
-			array('class_id, session_number', 'numerical', 'integerOnly'=>true),
-			array('session_name, front_image, user_input', 'length', 'max'=>50),
+			array('class_name, class_category_id, max_capacity, description, lecturer_id, front_image', 'required'),
+			array('class_category_id, max_capacity, lecturer_id', 'numerical', 'integerOnly'=>true),
+			array('class_name, user_input', 'length', 'max'=>50),
+			array('description, front_image', 'length', 'max'=>250),
 			array('status_record', 'length', 'max'=>1),
 			array('date_start, date_end, input_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('session_id, class_id, session_name, session_number, front_image, description, content, date_start, date_end, user_input, input_date, status_record', 'safe', 'on'=>'search'),
+			array('class_id, class_name, class_category_id, max_capacity, description, date_start, date_end, lecturer_id, front_image, user_input, input_date, status_record', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,10 +73,12 @@ class MasterSession extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'class' => array(self::BELONGS_TO, 'MasterClass', 'class_id'),
-			'trAssignments' => array(self::HAS_MANY, 'TrAssignment', 'session_id'),
-			'trDocs' => array(self::HAS_MANY, 'TrDocs', 'session_id'),
-			'trVideos' => array(self::HAS_MANY, 'TrVideo', 'session_id'),
+			'classCategory' => array(self::BELONGS_TO, 'LtClassCategory', 'class_category_id'),
+			'lecturer' => array(self::BELONGS_TO, 'MsAccount', 'lecturer_id'),
+			'msSessions' => array(self::HAS_MANY, 'MsSession', 'class_id'),
+			'trClassReviews' => array(self::HAS_MANY, 'TrClassReview', 'class_id'),
+			'trPosts' => array(self::HAS_MANY, 'TrPost', 'class_id'),
+			'trRatings' => array(self::HAS_MANY, 'TrRating', 'class_id'),
 		);
 	}
 
@@ -83,15 +88,15 @@ class MasterSession extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'session_id' => 'Session',
 			'class_id' => 'Class',
-			'session_name' => 'Session Name',
-			'session_number' => 'Session Number',
-			'front_image' => 'Front Image',
+			'class_name' => 'Class Name',
+			'class_category_id' => 'Class Category',
+			'max_capacity' => 'Max Capacity',
 			'description' => 'Description',
-			'content' => 'Content',
 			'date_start' => 'Date Start',
 			'date_end' => 'Date End',
+			'lecturer_id' => 'Lecturer',
+			'front_image' => 'Front Image',
 			'user_input' => 'User Input',
 			'input_date' => 'Input Date',
 			'status_record' => 'Status Record',
@@ -109,15 +114,15 @@ class MasterSession extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('session_id',$this->session_id);
 		$criteria->compare('class_id',$this->class_id);
-		$criteria->compare('session_name',$this->session_name,true);
-		$criteria->compare('session_number',$this->session_number);
-		$criteria->compare('front_image',$this->front_image,true);
+		$criteria->compare('class_name',$this->class_name,true);
+		$criteria->compare('class_category_id',$this->class_category_id);
+		$criteria->compare('max_capacity',$this->max_capacity);
 		$criteria->compare('description',$this->description,true);
-		$criteria->compare('content',$this->content,true);
 		$criteria->compare('date_start',$this->date_start,true);
 		$criteria->compare('date_end',$this->date_end,true);
+		$criteria->compare('lecturer_id',$this->lecturer_id);
+		$criteria->compare('front_image',$this->front_image,true);
 		$criteria->compare('user_input',$this->user_input,true);
 		$criteria->compare('input_date',$this->input_date,true);
 		$criteria->compare('status_record',$this->status_record,true);

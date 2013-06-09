@@ -12,6 +12,9 @@
  * @property string $user_input
  * @property string $input_date
  * @property string $status_record
+ *
+ * The followings are the available model relations:
+ * @property MsAccount $account
  */
 class TrClass extends CActiveRecord
 {
@@ -60,6 +63,7 @@ class TrClass extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'account' => array(self::BELONGS_TO, 'MsAccount', 'account_id'),
 		);
 	}
 

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "master_account".
+ * This is the model class for table "ms_account".
  *
- * The followings are the available columns in table 'master_account':
+ * The followings are the available columns in table 'ms_account':
  * @property integer $account_id
  * @property string $user_name
  * @property string $password
@@ -14,23 +14,25 @@
  * @property string $status_record
  *
  * The followings are the available model relations:
- * @property ClassReview[] $classReviews
- * @property MasterProfile $profile
- * @property MasterUserType $userType
- * @property MasterClass[] $masterClasses
+ * @property MsProfile $profile
+ * @property LtUserType $userType
+ * @property MsClass[] $msClasses
+ * @property TrAssignment[] $trAssignments
  * @property TrAssignmentDetail[] $trAssignmentDetails
- * @property MasterClass[] $masterClasses1
+ * @property TrClass[] $trClasses
+ * @property TrClassReview[] $trClassReviews
+ * @property TrDiscussion[] $trDiscussions
+ * @property TrFiles[] $trFiles
  * @property TrPost[] $trPosts
- * @property TrPost[] $trPosts1
- * @property TrPriviledge[] $trPriviledges
+ * @property TrRating[] $trRatings
  * @property TrVideo[] $trVideos
  */
-class MasterAccount extends CActiveRecord
+class MsAccount extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return MasterAccount the static model class
+	 * @return MsAccount the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -42,7 +44,7 @@ class MasterAccount extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'master_account';
+		return 'ms_account';
 	}
 
 	/**
@@ -60,7 +62,7 @@ class MasterAccount extends CActiveRecord
 			array('input_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('account_id, user_name, password, profile_id, user_type_id', 'safe', 'on'=>'search'),
+			array('account_id, user_name, password, profile_id, user_type_id, user_input, input_date, status_record', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,16 +74,18 @@ class MasterAccount extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'classReviews' => array(self::HAS_MANY, 'ClassReview', 'account_id'),
-			'profile' => array(self::BELONGS_TO, 'MasterProfile', 'profile_id'),
-			'userType' => array(self::BELONGS_TO, 'MasterUserType', 'user_type_id'),
-			'masterClasses' => array(self::HAS_MANY, 'MasterClass', 'lecture_id'),
+			'profile' => array(self::BELONGS_TO, 'MsProfile', 'profile_id'),
+			'userType' => array(self::BELONGS_TO, 'LtUserType', 'user_type_id'),
+			'msClasses' => array(self::HAS_MANY, 'MsClass', 'lecturer_id'),
+			'trAssignments' => array(self::HAS_MANY, 'TrAssignment', 'created_by'),
 			'trAssignmentDetails' => array(self::HAS_MANY, 'TrAssignmentDetail', 'account_id'),
-			'masterClasses1' => array(self::MANY_MANY, 'MasterClass', 'tr_class(account_id, class_id)'),
+			'trClasses' => array(self::HAS_MANY, 'TrClass', 'account_id'),
+			'trClassReviews' => array(self::HAS_MANY, 'TrClassReview', 'account_id'),
+			'trDiscussions' => array(self::HAS_MANY, 'TrDiscussion', 'created_by'),
+			'trFiles' => array(self::HAS_MANY, 'TrFiles', 'added_by'),
 			'trPosts' => array(self::HAS_MANY, 'TrPost', 'account_id'),
-			'trPosts1' => array(self::MANY_MANY, 'TrPost', 'tr_post_rating(account_id, post_id)'),
-			'trPriviledges' => array(self::HAS_MANY, 'TrPriviledge', 'account_id'),
-			'trVideos' => array(self::MANY_MANY, 'TrVideo', 'tr_video_rating(account_id, video_id)'),
+			'trRatings' => array(self::HAS_MANY, 'TrRating', 'account_id'),
+			'trVideos' => array(self::HAS_MANY, 'TrVideo', 'added_by'),
 		);
 	}
 
@@ -96,9 +100,9 @@ class MasterAccount extends CActiveRecord
 			'password' => 'Password',
 			'profile_id' => 'Profile',
 			'user_type_id' => 'User Type',
-			//'user_input' => 'User Input',
-			//'input_date' => 'Input Date',
-			//'status_record' => 'Status Record',
+			'user_input' => 'User Input',
+			'input_date' => 'Input Date',
+			'status_record' => 'Status Record',
 		);
 	}
 
@@ -118,6 +122,9 @@ class MasterAccount extends CActiveRecord
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('profile_id',$this->profile_id);
 		$criteria->compare('user_type_id',$this->user_type_id);
+		$criteria->compare('user_input',$this->user_input,true);
+		$criteria->compare('input_date',$this->input_date,true);
+		$criteria->compare('status_record',$this->status_record,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

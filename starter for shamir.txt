@@ -1,0 +1,45 @@
+sign up for github at github.com
+download and install github
+
+download and install XAMPP
+[configure and] start xampp
+
+[if port 80 is not available]
+open /xampp/apache/conf/httpd.conf with text editor
+change:
+Listen 80 to Listen <port> => Listen 85 (port: 85)
+ServerName localhost:80 to ServerName localhost:<port> => ServerName localhost:85 (port: 85)
+
+
+
+
+configure phpmyadmin user
+	User Name: shamir
+	Password: projectsbd
+
+place yii in XAMPP documentRoot
+default documentRoot: /xampp/htdocs
+therefore, default yii location should be:
+/xampp/yii
+
+
+configure github:
+tools > options
+change default storage directory to your documentRoot
+default location: /xampp/htdocs
+
+--place shamir inside documentRoot
+--default location: /xampp/htdocs/shamir
+
+add repository: aongko/shamir
+click 'CLONE'
+look at <documentRoot>/shamir
+if not exists, something's wrong :p
+example: /xampp/htdocs/shamir
+
+
+
+test: localhost:<port>/shamir/
+default url: localhost/shamir (port: 80)
+another url: localhost:85/shamir (port: 85)
+

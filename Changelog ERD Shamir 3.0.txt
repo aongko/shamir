@@ -1,0 +1,32 @@
+tr_class_review
+Change date to created_date
+
+ms_session
+set allow null for front_image
+
+tr_assignment
+added created_date
+added created_by
+
+tr_assignment_detail
+added file_src (link to local storage)
+
+change tr_video
+video_id, video_name, video_url, added_by, added_date, user_input, input_date, status_record, session_id
+
+delete tr_docs
+
+add tr_files (file_id, file_name, file_url, file_src, added_by, added_date, user_input, input_date, status_record, assignment_id, assignment_detail_id)
+p.s. file_url -> link to external sites; file_src -> link to local storage
+
+tr_post
+change date to created_date
+
+delete tr_post_rating
+delete tr_video_rating
+
+add tr_rating (rating_id, account_id, star, rate_date, user_input, input_date, status_record, class_id, session_id, post_id, video_id)
+
+
+delete tr_privilege
+p.s. Use manual query for privilege; slower in process, but faster in developing
