@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 
 <table>
 	<tr>
-		<td style="vertical-align: top;">
+		<td style="vertical-align: top; border-right: 1px solid #000">
 			<div>
 			<?php
 				foreach ($classCategoryList as $data) {
@@ -22,7 +22,17 @@ $this->breadcrumbs=array(
 		</td>
 		<td>
 			<div>
-				<table>
+				<table style="width: 750px" class="withborder">
+					<col width="150px" />
+					<col width="150px" />
+					<col width="350px" />
+					<col width="100px" />
+					<tr>
+						<th>Class Name</th>
+						<th>Max Capacity</th>
+						<th>Description</th>
+						<th>Action</th>
+					</tr>
 				<?php
 				
 				$this->widget('zii.widgets.CListView', array(
@@ -31,6 +41,7 @@ $this->breadcrumbs=array(
 					'sortableAttributes'=>array(
 						'class_name' => 'Name',
 					),
+					'summaryText' => '',
 				));
 				
 				?>

@@ -254,3 +254,18 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+table.withborder {
+	border-collapse: collapse;
+	border-top: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+table.withborder tr td, table.withborder tr th {
+	padding: 0;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+table.withborder tr th {
+	font-weight: bold;
+	text-align: center;
+}
