@@ -43,7 +43,7 @@
 							array('label'=>'Biologi', 'url'=>'#'),
 						)
 					),
-					array('label'=>'My Class', 'url'=>array('/MyClass'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'My Class', 'url'=>array('/site/myClass'), 'visible'=>!Yii::app()->user->isGuest),
 					array('label'=>'My Profile', 'url'=>array('/site/myProfile'), 'visible'=>!Yii::app()->user->isGuest),
 					array('label'=>'About Us', 'url'=>array('/site/aboutUs')),
 					array('label'=>'Contact Us', 'url'=>array('/site/contact')),

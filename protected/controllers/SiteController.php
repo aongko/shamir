@@ -23,8 +23,8 @@ class SiteController extends Controller
 	public function actionRegister()
 	{
 		$model=new RegisterForm;
-		$acc = new MasterAccount;
-		$prof = new MasterProfile;
+		$acc = new MsAccount;
+		$prof = new MsProfile;
 		$err;
 		// uncomment the following code to enable ajax-based validation
 		/*
@@ -54,7 +54,7 @@ class SiteController extends Controller
 				$prof->status_record = 'I';
 				if ($prof->validate()) {
 					$acc->user_name = $model->user_name;
-					$acc->password = $model->password;
+					$acc->password = sha1($model->password);
 					$acc->user_type_id = 1;
 					$acc->profile_id = 0; //dummy, to be replaced
 					$acc->status_record = 'I';
@@ -166,7 +166,10 @@ class SiteController extends Controller
 	
 	public function actionMyProfile()
 	{
-		$model = MasterProfile::model()->findByAttributes(array('profile_id'=>Yii::app()->user->getState('accountId')));
+		//$model = MsProfile::model()->findByAttributes(array('profile_id'=>Yii::app()->user->getState('accountId')));
+		$acc = MsAccount::model()->findByPk(Yii::app()->user->getState('accountId'));		
+		if (empty($acc)) throw new CHttpException(404,'Your profile page could not be found.');
+		$model = $acc->profile;
 		if (empty($model)) throw new CHttpException(404,'Your profile page could not be found.');
 		
 		//$this->module->setId('My Profile');
