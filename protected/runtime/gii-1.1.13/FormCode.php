@@ -1,5 +1,5 @@
 <?php
 return array (
   'template' => 'default',
-  'viewPath' => 'application.views.site',
+  'viewPath' => 'application.modules.class.views.lecturer.home',
 );

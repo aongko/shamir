@@ -17,6 +17,7 @@ return array(
 		'application.models.activeRecord.*',
 		'application.models.formModel.*',
 		'application.components.*',
+		'application.modules.class.models.formModel.*',
 	),
 
 	'modules'=>array(
