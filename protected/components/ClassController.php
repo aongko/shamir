@@ -25,19 +25,19 @@ class ClassController extends CController
 	public function init() {
 		parent::init();
 		$this->menuStudentOperation=array(
-			array('label'=>'Home', 'url'=>array('/class/student/home', 'classID'=>$this->module->classID)),
-			array('label'=>'Video', 'url'=>array('/class/student/video', 'classID'=>$this->module->classID)),
-			array('label'=>'Additional Material', 'url'=>array('/class/student/additionalMaterial', 'classID'=>$this->module->classID)),
-			array('label'=>'Forum', 'url'=>array('/class/student/forum', 'classID'=>$this->module->classID)),
-			array('label'=>'Assignment', 'url'=>array('/class/student/assignment', 'classID'=>$this->module->classID)),
+			array('label'=>'Home', 'url'=>array('/class/student/home', 'classId'=>$this->module->classId)),
+			array('label'=>'Video', 'url'=>array('/class/student/video', 'classId'=>$this->module->classId)),
+			array('label'=>'Additional Material', 'url'=>array('/class/student/additionalMaterial', 'classId'=>$this->module->classId)),
+			array('label'=>'Forum', 'url'=>array('/class/student/forum', 'classId'=>$this->module->classId)),
+			array('label'=>'Assignment', 'url'=>array('/class/student/assignment', 'classId'=>$this->module->classId)),
 		);
 		
 		$this->menuLecturerOperation=array(
-			array('label'=>'Manage Home', 'url'=>array('/class/lecturer/home', 'classID'=>$this->module->classID)),
-			array('label'=>'Manage Video', 'url'=>array('/class/lecturer/video', 'classID'=>$this->module->classID)),
-			array('label'=>'Manage Additional Material', 'url'=>array('/class/lecturer/additionalMaterial', 'classID'=>$this->module->classID)),
-			array('label'=>'Manage Forum', 'url'=>array('/class/lecturer/forum', 'classID'=>$this->module->classID)),
-			array('label'=>'Manage Assignment', 'url'=>array('/class/lecturer/assignment', 'classID'=>$this->module->classID)),
+			array('label'=>'Manage Home', 'url'=>array('/class/lecturer/home', 'classId'=>$this->module->classId)),
+			array('label'=>'Manage Video', 'url'=>array('/class/lecturer/video', 'classId'=>$this->module->classId)),
+			array('label'=>'Manage Additional Material', 'url'=>array('/class/lecturer/additionalMaterial', 'classId'=>$this->module->classId)),
+			array('label'=>'Manage Forum', 'url'=>array('/class/lecturer/forum', 'classId'=>$this->module->classId)),
+			array('label'=>'Manage Assignment', 'url'=>array('/class/lecturer/assignment', 'classId'=>$this->module->classId)),
 		);
 	}
 }

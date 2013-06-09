@@ -4,7 +4,7 @@ class HomeController extends ClassController
 {
 	public function actionIndex()
 	{
-		echo $this->module->classID;
+		echo $this->module->classId;
 		$this->render('index');
 	}
 }

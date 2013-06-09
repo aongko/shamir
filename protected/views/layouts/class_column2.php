@@ -10,7 +10,7 @@
 	<?php
 		if (!empty($this->menuStudentOperation)) {
 			$this->beginWidget('zii.widgets.CPortlet', array(
-				'title'=>$this->module->classID,
+				'title'=>$this->module->classId,
 			));
 			$this->widget('zii.widgets.CMenu', array(
 				'items'=>$this->menuStudentOperation,

@@ -64,6 +64,7 @@ class TrClass extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'account' => array(self::BELONGS_TO, 'MsAccount', 'account_id'),
+			'class' => array(self::HAS_ONE, 'MsClass', 'class_id'),
 		);
 	}
 

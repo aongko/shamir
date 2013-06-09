@@ -175,4 +175,12 @@ class SiteController extends Controller
 		//$this->module->setId('My Profile');
 		$this->render('myProfile', array('model'=>$model));
 	}
+	
+	public function actionMyClass() {
+		if (Yii::app()->user->isGuest) $this->redirect(CHtml::normalizeUrl(array('/site/login')));
+		$joined = new TrClass;
+		$joined->unsetAttributes();
+		$joined->account_id = Yii::app()->user->getState('accountId');		
+		$this->render('myClass', array('joined'=>$joined));
+	}
 }
