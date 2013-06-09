@@ -1,29 +1,28 @@
 <?php
 
 /**
- * This is the model class for table "tr_assignment_detail".
+ * This is the model class for table "tr_class_review".
  *
- * The followings are the available columns in table 'tr_assignment_detail':
- * @property integer $assignment_detail_id
- * @property integer $assignment_id
+ * The followings are the available columns in table 'tr_class_review':
+ * @property integer $class_review_id
+ * @property integer $class_id
  * @property integer $account_id
+ * @property string $created_date
  * @property string $content
- * @property integer $file_id
  * @property string $user_input
  * @property string $input_date
  * @property string $status_record
  *
  * The followings are the available model relations:
- * @property TrAssignment $assignment
+ * @property MsClass $class
  * @property MsAccount $account
- * @property TrFiles $file
  */
-class TrAssignmentDetail extends CActiveRecord
+class TrClassReview extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return TrAssignmentDetail the static model class
+	 * @return TrClassReview the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -35,7 +34,7 @@ class TrAssignmentDetail extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'tr_assignment_detail';
+		return 'tr_class_review';
 	}
 
 	/**
@@ -46,15 +45,15 @@ class TrAssignmentDetail extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('assignment_id, account_id', 'required'),
-			array('assignment_id, account_id, file_id', 'numerical', 'integerOnly'=>true),
-			array('content', 'length', 'max'=>10000),
+			array('class_id, account_id, created_date, content', 'required'),
+			array('class_id, account_id', 'numerical', 'integerOnly'=>true),
+			array('content', 'length', 'max'=>250),
 			array('user_input', 'length', 'max'=>50),
 			array('status_record', 'length', 'max'=>1),
 			array('input_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('assignment_detail_id, assignment_id, account_id, content, file_id, user_input, input_date, status_record', 'safe', 'on'=>'search'),
+			array('class_review_id, class_id, account_id, created_date, content, user_input, input_date, status_record', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,9 +65,8 @@ class TrAssignmentDetail extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'assignment' => array(self::BELONGS_TO, 'TrAssignment', 'assignment_id'),
+			'class' => array(self::BELONGS_TO, 'MsClass', 'class_id'),
 			'account' => array(self::BELONGS_TO, 'MsAccount', 'account_id'),
-			'file' => array(self::BELONGS_TO, 'TrFiles', 'file_id'),
 		);
 	}
 
@@ -78,11 +76,11 @@ class TrAssignmentDetail extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'assignment_detail_id' => 'Assignment Detail',
-			'assignment_id' => 'Assignment',
+			'class_review_id' => 'Class Review',
+			'class_id' => 'Class',
 			'account_id' => 'Account',
+			'created_date' => 'Created Date',
 			'content' => 'Content',
-			'file_id' => 'File',
 			'user_input' => 'User Input',
 			'input_date' => 'Input Date',
 			'status_record' => 'Status Record',
@@ -100,11 +98,11 @@ class TrAssignmentDetail extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('assignment_detail_id',$this->assignment_detail_id);
-		$criteria->compare('assignment_id',$this->assignment_id);
+		$criteria->compare('class_review_id',$this->class_review_id);
+		$criteria->compare('class_id',$this->class_id);
 		$criteria->compare('account_id',$this->account_id);
+		$criteria->compare('created_date',$this->created_date,true);
 		$criteria->compare('content',$this->content,true);
-		$criteria->compare('file_id',$this->file_id);
 		$criteria->compare('user_input',$this->user_input,true);
 		$criteria->compare('input_date',$this->input_date,true);
 		$criteria->compare('status_record',$this->status_record,true);

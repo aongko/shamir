@@ -5,20 +5,20 @@
  *
  * The followings are the available columns in table 'tr_post':
  * @property integer $post_id
- * @property string $content
- * @property integer $discussion_id
- * @property string $date
  * @property integer $account_id
+ * @property string $created_date
+ * @property string $content
  * @property string $user_input
  * @property string $input_date
  * @property string $status_record
+ * @property integer $discussion_id
+ * @property integer $class_id
  *
  * The followings are the available model relations:
- * @property TrDocs[] $trDocs
- * @property MasterAccount $account
- * @property TrForumDiscussion $discussion
- * @property MasterAccount[] $masterAccounts
- * @property TrVideo[] $trVideos
+ * @property MsAccount $account
+ * @property TrDiscussion $discussion
+ * @property MsClass $class
+ * @property TrRating[] $trRatings
  */
 class TrPost extends CActiveRecord
 {
@@ -48,14 +48,15 @@ class TrPost extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('content, discussion_id, date, account_id', 'required'),
-			array('discussion_id, account_id', 'numerical', 'integerOnly'=>true),
+			array('account_id, created_date, content', 'required'),
+			array('account_id, discussion_id, class_id', 'numerical', 'integerOnly'=>true),
+			array('content', 'length', 'max'=>10000),
 			array('user_input', 'length', 'max'=>50),
 			array('status_record', 'length', 'max'=>1),
 			array('input_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('post_id, content, discussion_id, date, account_id, user_input, input_date, status_record', 'safe', 'on'=>'search'),
+			array('post_id, account_id, created_date, content, user_input, input_date, status_record, discussion_id, class_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,11 +68,10 @@ class TrPost extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'trDocs' => array(self::HAS_MANY, 'TrDocs', 'post_id'),
-			'account' => array(self::BELONGS_TO, 'MasterAccount', 'account_id'),
-			'discussion' => array(self::BELONGS_TO, 'TrForumDiscussion', 'discussion_id'),
-			'masterAccounts' => array(self::MANY_MANY, 'MasterAccount', 'tr_post_rating(post_id, account_id)'),
-			'trVideos' => array(self::HAS_MANY, 'TrVideo', 'post_id'),
+			'account' => array(self::BELONGS_TO, 'MsAccount', 'account_id'),
+			'discussion' => array(self::BELONGS_TO, 'TrDiscussion', 'discussion_id'),
+			'class' => array(self::BELONGS_TO, 'MsClass', 'class_id'),
+			'trRatings' => array(self::HAS_MANY, 'TrRating', 'post_id'),
 		);
 	}
 
@@ -82,13 +82,14 @@ class TrPost extends CActiveRecord
 	{
 		return array(
 			'post_id' => 'Post',
-			'content' => 'Content',
-			'discussion_id' => 'Discussion',
-			'date' => 'Date',
 			'account_id' => 'Account',
+			'created_date' => 'Created Date',
+			'content' => 'Content',
 			'user_input' => 'User Input',
 			'input_date' => 'Input Date',
 			'status_record' => 'Status Record',
+			'discussion_id' => 'Discussion',
+			'class_id' => 'Class',
 		);
 	}
 
@@ -104,13 +105,14 @@ class TrPost extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('post_id',$this->post_id);
-		$criteria->compare('content',$this->content,true);
-		$criteria->compare('discussion_id',$this->discussion_id);
-		$criteria->compare('date',$this->date,true);
 		$criteria->compare('account_id',$this->account_id);
+		$criteria->compare('created_date',$this->created_date,true);
+		$criteria->compare('content',$this->content,true);
 		$criteria->compare('user_input',$this->user_input,true);
 		$criteria->compare('input_date',$this->input_date,true);
 		$criteria->compare('status_record',$this->status_record,true);
+		$criteria->compare('discussion_id',$this->discussion_id);
+		$criteria->compare('class_id',$this->class_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

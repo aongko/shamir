@@ -28,6 +28,9 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+		'class'=>array(
+			'defaultController'=>'home',
+		),
 		/*
 		'Learn',
 		
@@ -52,9 +55,11 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
+				'class/<classID:\d+>/<apapun:\w+>/<controller:\w+>/<action:\w+>/*'=>'class/<apapun>/<controller>/<action>',
+				'class/<classID:\d+>/<apapun:\w+>/<controller:\w+>/*'=>'class/<apapun>/<controller>',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>/',
 			),
 			'showScriptName'=>false,
 		),

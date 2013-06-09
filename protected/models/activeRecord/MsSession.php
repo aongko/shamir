@@ -1,27 +1,34 @@
 <?php
 
 /**
- * This is the model class for table "tr_class".
+ * This is the model class for table "ms_session".
  *
- * The followings are the available columns in table 'tr_class':
+ * The followings are the available columns in table 'ms_session':
+ * @property integer $session_id
  * @property integer $class_id
- * @property integer $account_id
+ * @property string $session_name
+ * @property integer $session_number
+ * @property string $front_image
+ * @property string $description
+ * @property string $content
  * @property string $date_start
- * @property string $date_finish
- * @property string $last_accessed
+ * @property string $date_end
  * @property string $user_input
  * @property string $input_date
  * @property string $status_record
  *
  * The followings are the available model relations:
- * @property MsAccount $account
+ * @property MsClass $class
+ * @property TrAssignment[] $trAssignments
+ * @property TrRating[] $trRatings
+ * @property TrVideo[] $trVideos
  */
-class TrClass extends CActiveRecord
+class MsSession extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return TrClass the static model class
+	 * @return MsSession the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -33,7 +40,7 @@ class TrClass extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'tr_class';
+		return 'ms_session';
 	}
 
 	/**
@@ -44,14 +51,16 @@ class TrClass extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('class_id, account_id', 'required'),
-			array('class_id, account_id', 'numerical', 'integerOnly'=>true),
-			array('user_input', 'length', 'max'=>50),
+			array('class_id, session_name, session_number, description, content', 'required'),
+			array('class_id, session_number', 'numerical', 'integerOnly'=>true),
+			array('session_name, user_input', 'length', 'max'=>50),
+			array('front_image, description', 'length', 'max'=>250),
+			array('content', 'length', 'max'=>10000),
 			array('status_record', 'length', 'max'=>1),
-			array('date_start, date_finish, last_accessed, input_date', 'safe'),
+			array('date_start, date_end, input_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('class_id, account_id, date_start, date_finish, last_accessed, user_input, input_date, status_record', 'safe', 'on'=>'search'),
+			array('session_id, class_id, session_name, session_number, front_image, description, content, date_start, date_end, user_input, input_date, status_record', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,7 +72,10 @@ class TrClass extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'account' => array(self::BELONGS_TO, 'MsAccount', 'account_id'),
+			'class' => array(self::BELONGS_TO, 'MsClass', 'class_id'),
+			'trAssignments' => array(self::HAS_MANY, 'TrAssignment', 'session_id'),
+			'trRatings' => array(self::HAS_MANY, 'TrRating', 'session_id'),
+			'trVideos' => array(self::HAS_MANY, 'TrVideo', 'session_id'),
 		);
 	}
 
@@ -73,11 +85,15 @@ class TrClass extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'session_id' => 'Session',
 			'class_id' => 'Class',
-			'account_id' => 'Account',
+			'session_name' => 'Session Name',
+			'session_number' => 'Session Number',
+			'front_image' => 'Front Image',
+			'description' => 'Description',
+			'content' => 'Content',
 			'date_start' => 'Date Start',
-			'date_finish' => 'Date Finish',
-			'last_accessed' => 'Last Accessed',
+			'date_end' => 'Date End',
 			'user_input' => 'User Input',
 			'input_date' => 'Input Date',
 			'status_record' => 'Status Record',
@@ -95,11 +111,15 @@ class TrClass extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('session_id',$this->session_id);
 		$criteria->compare('class_id',$this->class_id);
-		$criteria->compare('account_id',$this->account_id);
+		$criteria->compare('session_name',$this->session_name,true);
+		$criteria->compare('session_number',$this->session_number);
+		$criteria->compare('front_image',$this->front_image,true);
+		$criteria->compare('description',$this->description,true);
+		$criteria->compare('content',$this->content,true);
 		$criteria->compare('date_start',$this->date_start,true);
-		$criteria->compare('date_finish',$this->date_finish,true);
-		$criteria->compare('last_accessed',$this->last_accessed,true);
+		$criteria->compare('date_end',$this->date_end,true);
 		$criteria->compare('user_input',$this->user_input,true);
 		$criteria->compare('input_date',$this->input_date,true);
 		$criteria->compare('status_record',$this->status_record,true);
