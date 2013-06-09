@@ -236,7 +236,7 @@ CREATE TABLE IF NOT EXISTS `tr_class` (
   `user_input` varchar(50) DEFAULT NULL,
   `input_date` datetime DEFAULT NULL,
   `status_record` char(1) DEFAULT NULL,
-  PRIMARY KEY (`class_id`),
+  PRIMARY KEY (`class_id`, `account_id`),
   KEY `account_id` (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
