@@ -111,7 +111,7 @@ class ForumController extends ClassController
 			
 			$postCriteria->discussion_id = $discussionId;
 			
-			$discussion = TrDiscussion::model()->findByPk($discussionId);
+			$discussion = TrDiscussion::model()->findByPk($discussionId, "status_record <> 'D'");
 			$this->render('viewDiscussion', array('postCriteria'=>$postCriteria, 'discussion'=>$discussion));
 		}
 		else {

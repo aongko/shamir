@@ -48,6 +48,7 @@ class HomeController extends ClassController
 		if(isset($_GET['TrPost']))
 			$model2->attributes=$_GET['TrPost'];
 		$model2->class_id = $this->module->classId;
+		$model2->status_record = '<>D';
 		$this->render('index',array('model1'=>$model1, 'model2'=>$model2));
 	}
 	
@@ -60,7 +61,7 @@ class HomeController extends ClassController
 	
 	public function loadModel($id)
 	{
-		$model=TrPost::model()->findByPk($id);
+		$model=TrPost::model()->findByPk($id, "status_record <> 'D'");
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -81,5 +82,14 @@ class HomeController extends ClassController
 		$this->render('update',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionDelete($id)
+	{
+		$model = TrPost::model()->findByPk($id);
+		$model->status_record = 'D';
+		$model->save();
+
+		$this->redirect(array('index', 'classId'=>$this->module->classId));
 	}
 }
