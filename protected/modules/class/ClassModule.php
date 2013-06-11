@@ -13,10 +13,12 @@ class ClassModule extends CWebModule
 			'class.models.*',
 			'class.components.*',
 		));
+		
 		if (empty($_GET['classId'])) {
 			throw new CHttpException('403', 'Your request is invalid');
 		}
 		$this->classId = $_GET['classId'];
+		
 	}
 
 	public function beforeControllerAction($controller, $action)

@@ -11,12 +11,15 @@ $this->breadcrumbs=array(
 
 $dp = $model->search();
 $dp->pagination->pageSize = 30;
+$dp->criteria->order = 'created_date DESC';
 $this->widget('zii.widgets.CListView', array(
     'dataProvider'=>$dp,
     'itemView'=>'_post',   // refers to the partial view named '_post'
+    /*
     'sortableAttributes'=>array(
         'created_date'=>'Post Time',
     ),
+    */
     'separator'=>'<hr>',
     'summaryText'=>'',
 ));

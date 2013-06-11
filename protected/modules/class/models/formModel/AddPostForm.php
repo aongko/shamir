@@ -15,3 +15,4 @@ class AddPostForm extends CFormModel
 		);
 	}
 }
+?>
