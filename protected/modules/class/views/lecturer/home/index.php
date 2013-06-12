@@ -50,13 +50,13 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'template'=>'{view}{update}{delete}',
 			'buttons'=>array(
 				'view'=>array(
-					'url'=>'Yii::app()->createUrl("class/lecturer/home/view",array("id"=>$data->post_id, "classId"=>Yii::app()->controller->module->classId))'
+					'url'=>'CHtml::normalizeUrl(array("view", "id"=>$data->post_id, "classId"=>Yii::app()->controller->module->classId))'
 				),
 				'update'=>array(
-					'url'=>'Yii::app()->createUrl("class/lecturer/home/update",array("id"=>$data->post_id, "classId"=>Yii::app()->controller->module->classId))'
+					'url'=>'CHtml::normalizeUrl(array("update", "id"=>$data->post_id, "classId"=>Yii::app()->controller->module->classId))'
 				),
 				'delete'=>array(
-					'url'=>'Yii::app()->createUrl("class/lecturer/home/delete",array("id"=>$data->post_id, "classId"=>Yii::app()->controller->module->classId))'
+					'url'=>'CHtml::normalizeUrl(array("delete", "id"=>$data->post_id, "classId"=>Yii::app()->controller->module->classId))'
 				),
 			),
 		),

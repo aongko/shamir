@@ -37,7 +37,7 @@ class ClassController extends CController
 		
 		$this->menuLecturerOperation=array(
 			array('label'=>'Manage Home', 'url'=>array('/class/lecturer/home', 'classId'=>$this->module->classId)),
-			array('label'=>'Manage Session', 'url'=>array('/class/lecturer/session', 'classId'=>$this->module->classId)),
+			//array('label'=>'Manage Session', 'url'=>array('/class/lecturer/session', 'classId'=>$this->module->classId)),
 			array('label'=>'Manage Video', 'url'=>array('/class/lecturer/video', 'classId'=>$this->module->classId)),
 			array('label'=>'Manage Assignment', 'url'=>array('/class/lecturer/assignment', 'classId'=>$this->module->classId)),
 			//array('label'=>'Manage Additional Material', 'url'=>array('/class/lecturer/additionalMaterial', 'classId'=>$this->module->classId)),
