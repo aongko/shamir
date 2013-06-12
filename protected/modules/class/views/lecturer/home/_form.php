@@ -20,11 +20,11 @@
 		<?php echo $form->error($model,'content'); ?>
 	</div>
 	
-	<div class="row">
+	<!--<div class="row">
 		<?php echo $form->labelEx($model,'status_record'); ?>
 		<?php echo $form->textField($model,'status_record',array('size'=>1,'maxlength'=>1)); ?>
 		<?php echo $form->error($model,'status_record'); ?>
-	</div>
+	</div>-->
 	
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

@@ -167,7 +167,7 @@ class SiteController extends Controller
 	public function actionMyProfile()
 	{
 		//$model = MsProfile::model()->findByAttributes(array('profile_id'=>Yii::app()->user->getState('accountId')));
-		$acc = MsAccount::model()->findByPk(Yii::app()->user->getState('accountId'));		
+		$acc = MsAccount::model()->findByPk(Yii::app()->user->getState('accountId'),  "status_record <> 'D'");
 		if (empty($acc)) throw new CHttpException(404,'Your profile page could not be found.');
 		$model = $acc->profile;
 		if (empty($model)) throw new CHttpException(404,'Your profile page could not be found.');

@@ -135,12 +135,13 @@ class ForumController extends ClassController
 			
 			$postCriteria->discussion_id = $discussionId;
 			
-			$discussion = TrDiscussion::model()->findByPk($discussionId);
+			$discussion = TrDiscussion::model()->findByPk($discussionId, "status_record <> 'D'");
 			$this->render('viewDiscussion', array(
 												'postCriteria'=>$postCriteria,
 												'discussion'=>$discussion,
 												'model1'=>$model1,
 											));
+			$discussion = TrDiscussion::model()->findByPk($discussionId, "status_record <> 'D'");
 		}
 		else {
 			throw new CHttpException('404', 'Page not found');

@@ -4422,3 +4422,17 @@ Stack trace:
 REQUEST_URI=/shamir/assets/6d7359be/listview/jquery.yiilistview.js
 HTTP_REFERER=http://localhost:85/shamir/learn/index
 ---
+2013/06/11 17:27:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Your request is invalid' in E:\workspace\web\shamir\protected\modules\class\ClassModule.php:18
+Stack trace:
+#0 E:\workspace\yii\framework\base\CModule.php(90): ClassModule->init()
+#1 E:\workspace\yii\framework\YiiBase.php(206): CModule->__construct('class', NULL, Array)
+#2 E:\workspace\yii\framework\base\CModule.php(282): YiiBase::createComponent('class.ClassModu...', 'class', NULL, Array)
+#3 E:\workspace\yii\framework\web\CWebApplication.php(337): CModule->getModule('class')
+#4 E:\workspace\yii\framework\web\CWebApplication.php(276): CWebApplication->createController('class/lecturer/...')
+#5 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('class/lecturer/...')
+#6 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/shamir/class/lecturer/home/index
+HTTP_REFERER=http://localhost:85/shamir/class/1/lecturer/home
+---

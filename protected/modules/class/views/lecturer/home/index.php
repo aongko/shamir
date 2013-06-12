@@ -43,17 +43,20 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		
 		'user_input',
 		'input_date',
-		'status_record',
+		//'status_record',
 		
 		array(
 			'class'=>'CButtonColumn',
-			'template'=>'{view}{update}',
+			'template'=>'{view}{update}{delete}',
 			'buttons'=>array(
 				'view'=>array(
 					'url'=>'Yii::app()->createUrl("class/lecturer/home/view",array("id"=>$data->post_id, "classId"=>Yii::app()->controller->module->classId))'
 				),
 				'update'=>array(
 					'url'=>'Yii::app()->createUrl("class/lecturer/home/update",array("id"=>$data->post_id, "classId"=>Yii::app()->controller->module->classId))'
+				),
+				'delete'=>array(
+					'url'=>'Yii::app()->createUrl("class/lecturer/home/delete",array("id"=>$data->post_id, "classId"=>Yii::app()->controller->module->classId))'
 				),
 			),
 		),
