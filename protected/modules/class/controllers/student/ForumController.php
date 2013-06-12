@@ -106,13 +106,41 @@ class ForumController extends ClassController
 			);
 		}
 		else if (!empty($discussionId)) {
+			$model1=new AddPostForm;
+			if(isset($_POST['AddPostForm']))
+			{
+				$model1->attributes=$_POST['AddPostForm'];
+				if($model1->validate())
+				{
+					$post = new TrPost;
+					$post->account_id = Yii::app()->user->getState('accountId');
+					$post->created_date = new CDbExpression('NOW()');
+					$post->content = $model1->content;
+					$post->discussion_id = $discussionId;
+					$post->class_id = $this->module->classId;
+					
+					$post->user_input = Yii::app()->user->name;
+					$post->input_date = new CDbExpression('NOW()');
+					$post->status_record = 'A';
+					if ($post->save()) {
+						$this->redirect(array('viewDiscussion','discussionId'=>$discussionId, 'classId'=>$this->module->classId));
+					}
+				}
+			}
+			$model1->discussion_id = $discussionId;
+			$model1->class_id = $this->module->classId;
+			
 			$postCriteria = new TrPost('search');
 			$postCriteria->unsetAttributes();
 			
 			$postCriteria->discussion_id = $discussionId;
 			
 			$discussion = TrDiscussion::model()->findByPk($discussionId);
-			$this->render('viewDiscussion', array('postCriteria'=>$postCriteria, 'discussion'=>$discussion));
+			$this->render('viewDiscussion', array(
+												'postCriteria'=>$postCriteria,
+												'discussion'=>$discussion,
+												'model1'=>$model1,
+											));
 		}
 		else {
 			throw new CHttpException('404', 'Page not found');

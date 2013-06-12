@@ -42,7 +42,8 @@ class HomeController extends ClassController
 				}
 			}
 		}
-		
+		$model1->class_id = $this->module->classId;
+		$model1->discussion_id = null;
 		$model2=new TrPost('search');
 		$model2->unsetAttributes();  // clear any default values
 		if(isset($_GET['TrPost']))

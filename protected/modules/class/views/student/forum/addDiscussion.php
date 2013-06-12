@@ -3,7 +3,7 @@
 /* @var $model AddDiscussionForm */
 /* @var $form CActiveForm */
 ?>
-
+<h3>Ask Question</h3>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(

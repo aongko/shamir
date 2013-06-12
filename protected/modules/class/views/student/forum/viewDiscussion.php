@@ -11,4 +11,7 @@ $this->widget('zii.widgets.CListView', array(
     'separator'=>'<hr>',
     'template'=>'{items}{pager}',
 ));
+
+echo '<br><br><br>';
+$this->renderPartial('addPost', array('model'=>$model1));
 ?>
