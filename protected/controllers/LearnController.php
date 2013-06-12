@@ -29,6 +29,7 @@ class LearnController extends Controller
 		$model->account_id = Yii::app()->user->getState('accountId');
 		$model->user_input = Yii::app()->user->name;
 		$model->input_date = new CDbExpression('NOW()');
+		$model->status_record = 'A';
 		$model->save();
 		$this->render('successJoin');
 		

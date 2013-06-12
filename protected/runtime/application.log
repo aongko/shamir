@@ -4436,3 +4436,77 @@ Stack trace:
 REQUEST_URI=/shamir/class/lecturer/home/index
 HTTP_REFERER=http://localhost:85/shamir/class/1/lecturer/home
 ---
+2013/06/12 17:05:30 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status_record' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(*) FROM `tr_class` `t`  LEFT OUTER JOIN `ms_class` `class` ON (`class`.`class_id`=`t`.`class_id`)  WHERE ((account_id=:ycp0) AND (status_record NOT LIKE :ycp1)).
+in E:\workspace\web\shamir\protected\views\site\myClass.php (15)
+in E:\workspace\web\shamir\protected\controllers\SiteController.php (184)
+in E:\workspace\web\shamir\index.php (13)
+2013/06/12 17:05:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'status_record' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(*) FROM `tr_class` `t`  LEFT OUTER JOIN `ms_class` `class` ON (`class`.`class_id`=`t`.`class_id`)  WHERE ((account_id=:ycp0) AND (status_record NOT LIKE :ycp1))' in E:\workspace\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\workspace\yii\framework\db\CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 E:\workspace\yii\framework\db\ar\CActiveFinder.php(718): CDbCommand->queryScalar()
+#2 E:\workspace\yii\framework\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 E:\workspace\yii\framework\db\ar\CActiveRecord.php(1550): CActiveFinder->count(Object(CDbCriteria))
+#4 E:\workspace\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 E:\workspace\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 E:\workspace\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 E:\workspace\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 E:\workspace\yii\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#9 E:\workspace\yii\framework\zii\widgets\CListView.php(203): CBaseListView->init()
+#10 E:\workspace\yii\framework\web\CBaseController.php(147): CListView->init()
+#11 E:\workspace\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#12 E:\workspace\web\shamir\protected\views\site\myClass.php(15): CBaseController->widget('zii.widgets.CLi...', Array)
+#13 E:\workspace\yii\framework\web\CBaseController.php(126): require('E:\workspace\we...')
+#14 E:\workspace\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\workspace\we...', Array, true)
+#15 E:\workspace\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\workspace\we...', Array, true)
+#16 E:\workspace\yii\framework\web\CController.php(782): CController->renderPartial('myClass', Array, true)
+#17 E:\workspace\web\shamir\protected\controllers\SiteController.php(184): CController->render('myClass', Array)
+#18 E:\workspace\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionMyClass()
+#19 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 E:\workspace\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#21 E:\workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 E:\workspace\yii\framework\web\CWebApplication.php(282): CController->run('myClass')
+#23 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/myClass')
+#24 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/shamir/site/myClass
+HTTP_REFERER=http://localhost:85/shamir/
+---
+2013/06/12 17:07:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-13' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tr_class` (`class_id`, `account_id`, `user_input`, `input_date`) VALUES (:yp0, :yp1, :yp2, NOW()).
+in E:\workspace\web\shamir\protected\controllers\LearnController.php (32)
+in E:\workspace\web\shamir\index.php (13)
+2013/06/12 17:07:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-13' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `tr_class` (`class_id`, `account_id`, `user_input`, `input_date`) VALUES (:yp0, :yp1, :yp2, NOW())' in E:\workspace\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 E:\workspace\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 E:\workspace\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 E:\workspace\web\shamir\protected\controllers\LearnController.php(32): CActiveRecord->save()
+#3 [internal function]: LearnController->actionJoinClass('1')
+#4 E:\workspace\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LearnController), Array)
+#5 E:\workspace\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LearnController), Object(ReflectionMethod), Array)
+#6 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 E:\workspace\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 E:\workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 E:\workspace\yii\framework\web\CWebApplication.php(282): CController->run('joinClass')
+#10 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('learn/joinClass')
+#11 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/shamir/learn/joinClass?classId=1
+HTTP_REFERER=http://localhost:85/shamir/learn/classDetail?classId=1
+---
+2013/06/12 17:10:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Your request is invalid. You have already joined this class.' in E:\workspace\web\shamir\protected\controllers\LearnController.php:26
+Stack trace:
+#0 [internal function]: LearnController->actionJoinClass('1')
+#1 E:\workspace\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LearnController), Array)
+#2 E:\workspace\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LearnController), Object(ReflectionMethod), Array)
+#3 E:\workspace\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\workspace\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\workspace\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\workspace\yii\framework\web\CWebApplication.php(282): CController->run('joinClass')
+#7 E:\workspace\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('learn/joinClass')
+#8 E:\workspace\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 E:\workspace\web\shamir\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/shamir/learn/joinClass?classId=1
+HTTP_REFERER=http://localhost:85/shamir/learn/classDetail?classId=1
+---

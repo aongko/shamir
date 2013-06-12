@@ -109,7 +109,7 @@ class TrVideo extends CActiveRecord
 		$criteria->compare('added_date',$this->added_date,true);
 		$criteria->compare('user_input',$this->user_input,true);
 		$criteria->compare('input_date',$this->input_date,true);
-		$criteria->compare('status_record','<>D',true);
+		$criteria->compare('t.status_record','<>D',true);
 		$criteria->compare('session_id',$this->session_id);
 
 		return new CActiveDataProvider($this, array(
