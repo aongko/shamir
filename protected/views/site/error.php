@@ -12,4 +12,6 @@ $this->breadcrumbs=array(
 
 <div class="error">
 <?php echo CHtml::encode($message); ?>
+<br>
+Back to <?php echo CHtml::link('Previous page', Yii::app()->request->urlReferrer)?>, or go back to <?php echo CHtml::link('Home', CHtml::normalizeUrl(array('/site/index')))?>.
 </div>
