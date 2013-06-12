@@ -11,8 +11,9 @@ $this->breadcrumbs=array(
 
 <table>
 	<tr>
-		<td style="vertical-align: top; border-right: 1px solid #000">
+		<td style="vertical-align: top; border-right: 1px solid #000; width: 200px; padding: 5px;">
 			<div>
+				<h4 style="border-bottom: 1px solid #000">Choose Category:</h4>
 			<?php
 				foreach ($classCategoryList as $data) {
 					echo '<a href=\'' . CHtml::normalizeUrl(array('/' . Yii::app()->controller->getId() .'/' . Yii::app()->controller->action->getId() , 'classCategoryId'=>$data->class_category_id)) . '\'>' . $data->class_category_name . '<br>';
@@ -20,11 +21,11 @@ $this->breadcrumbs=array(
 			?>
 			</div>
 		</td>
-		<td>
+		<td style="padding: 5px;">
 			<div>
-				<table style="width: 750px" class="withborder">
-					<col width="150px" />
-					<col width="150px" />
+				<table style="width: 700px;" class="withborder">
+					<col width="125px" />
+					<col width="125px" />
 					<col width="350px" />
 					<col width="100px" />
 					<tr>

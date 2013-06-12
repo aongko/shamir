@@ -122,7 +122,7 @@ class MsSession extends CActiveRecord
 		$criteria->compare('date_end',$this->date_end,true);
 		$criteria->compare('user_input',$this->user_input,true);
 		$criteria->compare('input_date',$this->input_date,true);
-		$criteria->compare('status_record',$this->status_record,true);
+		$criteria->compare('status_record','<>D',true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
