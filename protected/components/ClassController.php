@@ -13,6 +13,8 @@ class ClassController extends CController
 	/**
 	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
 	 */
+	public $menu=array();
+	public $menuTitle;
 	public $menuStudentOperation;
 	public $menuLecturerOperation;
 	/**
@@ -27,17 +29,21 @@ class ClassController extends CController
 		$this->menuStudentOperation=array(
 			array('label'=>'Home', 'url'=>array('/class/student/home', 'classId'=>$this->module->classId)),
 			array('label'=>'Video', 'url'=>array('/class/student/video', 'classId'=>$this->module->classId)),
-			array('label'=>'Additional Material', 'url'=>array('/class/student/additionalMaterial', 'classId'=>$this->module->classId)),
+			//array('label'=>'Additional Material', 'url'=>array('/class/student/additionalMaterial', 'classId'=>$this->module->classId)),
+			array('label'=>'Additional Material', 'url'=>'#', 'linkOptions'=>array('onClick'=>'alert("This feature is coming soon");')),
 			array('label'=>'Forum', 'url'=>array('/class/student/forum', 'classId'=>$this->module->classId)),
 			array('label'=>'Assignment', 'url'=>array('/class/student/assignment', 'classId'=>$this->module->classId)),
 		);
 		
 		$this->menuLecturerOperation=array(
 			array('label'=>'Manage Home', 'url'=>array('/class/lecturer/home', 'classId'=>$this->module->classId)),
+			array('label'=>'Manage Session', 'url'=>array('/class/lecturer/session', 'classId'=>$this->module->classId)),
 			array('label'=>'Manage Video', 'url'=>array('/class/lecturer/video', 'classId'=>$this->module->classId)),
-			array('label'=>'Manage Additional Material', 'url'=>array('/class/lecturer/additionalMaterial', 'classId'=>$this->module->classId)),
-			array('label'=>'Manage Forum', 'url'=>array('/class/lecturer/forum', 'classId'=>$this->module->classId)),
 			array('label'=>'Manage Assignment', 'url'=>array('/class/lecturer/assignment', 'classId'=>$this->module->classId)),
+			//array('label'=>'Manage Additional Material', 'url'=>array('/class/lecturer/additionalMaterial', 'classId'=>$this->module->classId)),
+			array('label'=>'Manage Additional Material', 'url'=>'#', 'linkOptions'=>array('onClick'=>'alert("This feature is coming soon");')),
+			array('label'=>'Manage Forum', 'url'=>array('/class/lecturer/forum', 'classId'=>$this->module->classId)),
+			
 		);
 	}
 }

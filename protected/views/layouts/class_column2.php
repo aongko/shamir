@@ -8,6 +8,16 @@
 <div class="span-5 last">
 	<div id="sidebar">
 	<?php
+		$this->beginWidget('zii.widgets.CPortlet', array(
+			'title'=> (empty($this->menuTitle) ? '' : $this->menuTitle . ' ') . 'Operations',
+		));
+		$this->widget('zii.widgets.CMenu', array(
+			'items'=>$this->menu,
+			'htmlOptions'=>array('class'=>'operations'),
+		));
+		$this->endWidget();
+	?>
+	<?php
 		if (!empty($this->menuStudentOperation)) {
 			$this->beginWidget('zii.widgets.CPortlet', array(
 				'title'=>MsClass::model()->findByPk($this->module->classId)->class_name,

@@ -57,7 +57,19 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'date_of_birth'); ?>
 		<div class="hint">yyyy-mm-dd</div>
-		<?php echo $form->textField($model,'date_of_birth'); ?>
+		<?php
+		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model' => $model,
+			'attribute' => 'date_of_birth',
+			'options'=> array(
+				'dateFormat'=>'yy-mm-dd',
+				'changeYear'=>true,
+				'changeMonth'=>true,
+				'minDate'=>'1990-01-01',
+				'maxDate'=>date('Y-m-d'),
+			),
+		));
+		?>
 		<?php echo $form->error($model,'date_of_birth'); ?>
 	</div>
 
