@@ -115,7 +115,7 @@ class TrRating extends CActiveRecord
 		$criteria->compare('rate_date',$this->rate_date,true);
 		$criteria->compare('user_input',$this->user_input,true);
 		$criteria->compare('input_date',$this->input_date,true);
-		$criteria->compare('status_record',$this->status_record,true);
+		$criteria->compare('status_record','<>D',true);
 		$criteria->compare('class_id',$this->class_id);
 		$criteria->compare('session_id',$this->session_id);
 		$criteria->compare('post_id',$this->post_id);
