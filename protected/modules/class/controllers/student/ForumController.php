@@ -141,7 +141,6 @@ class ForumController extends ClassController
 												'discussion'=>$discussion,
 												'model1'=>$model1,
 											));
-			$discussion = TrDiscussion::model()->findByPk($discussionId, "status_record <> 'D'");
 		}
 		else {
 			throw new CHttpException('404', 'Page not found');
