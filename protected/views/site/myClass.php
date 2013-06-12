@@ -12,6 +12,7 @@ $this->breadcrumbs=array(
 $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$joined->with('class')->search(),
 	'itemView'=>'_myClass',
+	'emptyText'=>'No class joined',
 ));
 
 ?>

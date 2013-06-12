@@ -25,7 +25,6 @@ class SiteController extends Controller
 		$model=new RegisterForm;
 		$acc = new MsAccount;
 		$prof = new MsProfile;
-		$err;
 		// uncomment the following code to enable ajax-based validation
 		/*
 		if(isset($_POST['ajax']) && $_POST['ajax']==='register-form-register-form')
@@ -40,32 +39,41 @@ class SiteController extends Controller
 			$model->attributes=$_POST['RegisterForm'];
 			if($model->validate())
 			{
-				$prof->first_name = $model->first_name;
-				$prof->middle_name = $model->middle_name;
-				$prof->last_name = $model->last_name;
-				$prof->date_of_birth = $model->date_of_birth;
-				$prof->phone1 = $model->phone1;
-				$prof->phone2 = $model->phone2;
-				$prof->address = $model->address;
-				$prof->email1 = $model->email1;
-				$prof->email2 = $model->email2;
-				$prof->motto = $model->motto;
-				$prof->city_id = 1;
-				$prof->status_record = 'A';
-				if ($prof->validate()) {
+				$transaction = $prof->dbConnection->beginTransaction();
+				try {
+					$prof->first_name = $model->first_name;
+					$prof->middle_name = $model->middle_name;
+					$prof->last_name = $model->last_name;
+					$prof->date_of_birth = $model->date_of_birth;
+					$prof->phone1 = $model->phone1;
+					$prof->phone2 = $model->phone2;
+					$prof->address = $model->address;
+					$prof->email1 = $model->email1;
+					$prof->email2 = $model->email2;
+					$prof->motto = $model->motto;
+					$prof->city_id = $model->city_id;
+					$prof->user_input = 'Unregistered user';
+					$prof->input_date = new CDbExpression('NOW()');
+					$prof->status_record = 'A';
+					if (!$prof->save()) throw new Exception('Error saving profile!');
 					$acc->user_name = $model->user_name;
 					$acc->password = sha1($model->password);
 					$acc->user_type_id = 1;
-					$acc->profile_id = 0; //dummy, to be replaced
+					$acc->profile_id = $prof->profile_id;
 					$acc->status_record = 'A';
-					if ($acc->validate()) {
-						$prof->save();
-						$acc->profile_id = $prof->profile_id;
-						$acc->save();
-						$this->redirect(CHtml::normalizeUrl(array('site/index')));
-						return;
-					}
+					
+					$acc->user_input = 'Unregistered user';
+					$acc->input_date = new CDbExpression('NOW()');
+					$acc->status_record = 'A';
+					if (!$acc->save()) throw new Exception('Error saving account!');
+					$transaction->commit();
 				}
+				catch (Exception $e) {
+					$transaction->rollback();
+					echo $e;
+					die();
+				}
+				$this->redirect(CHtml::normalizeUrl(array('site/index')));
 			}
 		}
 		$this->render('register',array('model'=>$model, 'acc'=>$acc, 'prof'=>$prof));
@@ -166,6 +174,7 @@ class SiteController extends Controller
 	
 	public function actionMyProfile()
 	{
+		if (Yii::app()->user->isGuest) throw new CHttpException(403, 'You are not allowed to perform this action');
 		//$model = MsProfile::model()->findByAttributes(array('profile_id'=>Yii::app()->user->getState('accountId')));
 		$acc = MsAccount::model()->findByPk(Yii::app()->user->getState('accountId'),  "status_record <> 'D'");
 		if (empty($acc)) throw new CHttpException(404,'Your profile page could not be found.');

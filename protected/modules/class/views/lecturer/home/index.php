@@ -21,7 +21,7 @@ $this->renderPartial('addPost', array('model'=>$model1));
 
 ?>
 
-<h1>Manage Tr Posts</h1>
+<h1>Manage Posts</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -37,7 +37,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'columns'=>array(
 		'post_id',
 		'account_id',
-		'class_id',
 		'created_date',
 		array('header'=>'Content', 'name'=>'content', 'value'=>'substr($data->content, 0, 50)'),
 		

@@ -34,7 +34,6 @@ class ClassController extends CController
 			array('label'=>'Forum', 'url'=>array('/class/student/forum', 'classId'=>$this->module->classId)),
 			array('label'=>'Assignment', 'url'=>array('/class/student/assignment', 'classId'=>$this->module->classId)),
 		);
-		
 		$this->menuLecturerOperation=array(
 			array('label'=>'Manage Home', 'url'=>array('/class/lecturer/home', 'classId'=>$this->module->classId)),
 			//array('label'=>'Manage Session', 'url'=>array('/class/lecturer/session', 'classId'=>$this->module->classId)),
@@ -42,7 +41,8 @@ class ClassController extends CController
 			array('label'=>'Manage Assignment', 'url'=>array('/class/lecturer/assignment', 'classId'=>$this->module->classId)),
 			//array('label'=>'Manage Additional Material', 'url'=>array('/class/lecturer/additionalMaterial', 'classId'=>$this->module->classId)),
 			array('label'=>'Manage Additional Material', 'url'=>'#', 'linkOptions'=>array('onClick'=>'alert("This feature is coming soon");')),
-			array('label'=>'Manage Forum', 'url'=>array('/class/lecturer/forum', 'classId'=>$this->module->classId)),
+			//array('label'=>'Manage Forum', 'url'=>array('/class/lecturer/forum', 'classId'=>$this->module->classId)),
+			array('label'=>'Manage Forum', 'url'=>'#', 'linkOptions'=>array('onClick'=>'alert("This feature is coming soon");')),
 			
 		);
 	}

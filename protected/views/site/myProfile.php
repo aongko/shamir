@@ -6,11 +6,27 @@ $this->breadcrumbs=array(
 	'My Profile',
 );
 ?>
-<h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
 
 <?php
 echo '<h1> ' . $model->first_name . ' ' . $model->middle_name . ' ' . $model->last_name . '</h1>';
-foreach($model->getAttributes() as $key=>$value) {
-	echo $key . ': ' . $value . '<br/>';
-}
 ?>
+<table width = 100%>
+	<tr>
+		<td width=250px ><?php echo CHtml::image(Yii::app()->createUrl('/images/noprof.jpg'), '', array('width'=>250)); ?></td>
+		<td>
+			<?php $this->widget('zii.widgets.CDetailView', array(
+				'data'=>$model,
+				'attributes'=>array(
+					'date_of_birth:date',
+					'phone1',
+					'phone2',
+					'address',
+					'email1',
+					'email2',
+					'motto',
+				),
+			)); ?>
+
+		</td>
+	</tr>
+</table>

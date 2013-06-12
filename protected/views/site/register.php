@@ -102,7 +102,15 @@
 		<?php echo $form->textField($model,'email2'); ?>
 		<?php echo $form->error($model,'email2'); ?>
 	</div>
-
+	<div class = "row">
+		<?php echo $form->labelEx($model,'city_id'); ?>
+	<?php
+		$tmp = LtCity::model()->findAll();
+		$list = CHtml::listData($tmp, 'city_id', 'city_name');
+		echo CHtml::activeDropDownList($model, 'city_id', $list, array('empty'=>'Choose', 'style'=>"width:160px"));
+	?>
+		<?php echo $form->error($model,'city_id'); ?>
+	</div>
 	<div class="row">
 		<?php echo $form->labelEx($model,'motto'); ?>
 		<?php echo $form->textField($model,'motto'); ?>

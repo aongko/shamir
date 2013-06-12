@@ -11,11 +11,13 @@ class RegisterForm extends CFormModel {
 	public $address;
 	public $email1;
 	public $email2;
+	public $city_id;
 	public $motto = "";
 	
 	public function rules() {
 		return array(
-			array('user_name, password, password_repeat, first_name, date_of_birth, phone1, address, email1', 'required'),
+			array('user_name, password, password_repeat, first_name, date_of_birth, phone1, address, email1, city_id', 'required'),
+			array('city_id', 'numerical', 'integerOnly'=>true),
 			array('user_name, password', 'length', 'max'=>50),
 			array('password_repeat', 'compare', 'compareAttribute'=>'password'),
 			array('email1, email2', 'email'),

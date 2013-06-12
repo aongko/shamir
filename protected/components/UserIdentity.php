@@ -32,7 +32,8 @@ class UserIdentity extends CUserIdentity
 		return !$this->errorCode;
 		*/
 		$lho = MsAccount::Model()->findByAttributes(array('user_name' => $this->username), 'status_record <> \'D\'');
-		$this->username = $lho->user_name;
+		if (!empty($lho))
+			$this->username = $lho->user_name;
 		if ($lho === null)
 			$this->errorCode = self::ERROR_USERNAME_INVALID;
 		else if ($lho->password != sha1($this->password))

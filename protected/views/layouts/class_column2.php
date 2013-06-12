@@ -29,7 +29,7 @@
 			$this->endWidget();
 		}
 		
-		if (!empty($this->menuLecturerOperation)) {
+		if (Yii::app()->user->hasLecturerType($this->module->classId) && !empty($this->menuLecturerOperation)) {
 			$this->beginWidget('zii.widgets.CPortlet', array(
 				'title'=>'Lecturer Tools',
 			));

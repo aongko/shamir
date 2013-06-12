@@ -1,19 +1,43 @@
 <?php
-/* @var $this SiteController */
-
-$this->pageTitle=Yii::app()->name;
+	$this->pageTitle=Yii::app()->name;
 ?>
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+<h1>Welcome to Shamir Academy</h1>
+<Table border='1'>
+	<tr align='center'>
+		<td>Latest Video</td>
+		<td>Most Comment Video</td>
+		<td>Most View Video</td>
+	</tr>
+	<tr>
+		<td><iframe width="290" height="300" src="http://www.youtube.com/embed/_LDR1_Prveo" frameborder="0" allowfullscreen></iframe></td>
+		<td><iframe width="290" height="300" src="http://www.youtube.com/embed/1xSQlwWGT8M" frameborder="0" allowfullscreen></iframe></td>
+		<td><iframe width="290" height="300" src="http://www.youtube.com/embed/5-ZFOhHQS68" frameborder="0" allowfullscreen></iframe></td>
+	</tr>
+</table>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+<table border ='1'>
+	<tr>
+		<td style="width: 450px">
+			Our new facilities : <br/>
+				
+		</td>
+		<td  style="width: 455px">
+		New Lecture :<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			- GYM <br/>
+			- Swimming pool <br/>
+			- Inovation Lab <br/>
+			- Creative Lab <br/>
+			- Sport Hall <br/>
+		</td>
+		<td>
+			- Robbinson Gui <br/> 
+		- Pattinson Hui <br/>
+		- Emelson Lui <br/>
+		</td>
+	</tr>
+</table>

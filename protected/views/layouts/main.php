@@ -38,9 +38,8 @@
 					array('label'=>'Learn', 'url'=>array('/learn/index'),
 						'itemOptions'=>array('class'=>'has-sub'),
 						'items'=>array(
-							array('label'=>'Matematika', 'url'=>'#'),
-							array('label'=>'Fisika', 'url'=>'#'),
-							array('label'=>'Biologi', 'url'=>'#'),
+							array('label'=>'Mathematics', 'url'=>array('/learn/index', 'classCategoryId'=>1)),
+							array('label'=>'Physics', 'url'=>array('/learn/index', 'classCategoryId'=>2)),
 						)
 					),
 					array('label'=>'My Class', 'url'=>array('/site/myClass'), 'visible'=>!Yii::app()->user->isGuest),

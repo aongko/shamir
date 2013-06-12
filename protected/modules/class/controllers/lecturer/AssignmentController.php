@@ -3,10 +3,6 @@
 class AssignmentController extends ClassController
 {
 
-	/**
-	 * @return array action filters
-	 */
-	 /*
 	public function filters()
 	{
 		return array(
@@ -14,33 +10,16 @@ class AssignmentController extends ClassController
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
-	*/
-	/**
-	 * Specifies the access control rules.
-	 * This method is used by the 'accessControl' filter.
-	 * @return array access control rules
-	 */
+
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+			array('allow',
+				'expression'=>'$user->hasAdminType() || $user->hasLecturerType(Yii::app()->controller->module->classId)',
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
+			array('deny'),
 		);
 	}
-
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
@@ -166,14 +145,41 @@ class AssignmentController extends ClassController
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin', 'classId'=>$this->module->classId));
 	}
 
+
+	public function actionGetAssignmentDetailFile($assignmentDetailId) {
+		$model = TrAssignmentDetail::model()->with('file')->findByPk($assignmentDetailId, 't.status_record <> "D"');
+		if (empty($model)) throw new CHttpException ('404', 'File not found');
+		$path = $model->file->file_src . '/' . $model->file->file_id . '_' . $model->file->file_name;
+		if (!file_exists($path)) throw new CHttpException ('404', 'File not found');
+		Yii::app()->request->sendFile($model->file->file_name, file_get_contents($model->file->file_src . '/' . $model->file->file_id . '_' . $model->file->file_name));
+	}
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('TrAssignment');
-		$dataProvider->criteria->with = 'session';
-		$dataProvider->criteria->addCondition('session.class_id = ' . $this->module->classId);
+		$dataProvider=new CActiveDataProvider('TrAssignmentDetail');
+		/*
+		$dataProvider->criteria->with = array(
+											'assignment'=>array(
+												'select'=>false,
+												'condition'=>'assignment.status_record <> "D"',
+												'joinType'=>'INNER JOIN',
+												'with'=>array(
+													'session'=>array(
+														'select'=>false,
+														'condition'=>'','session.class_id = ' . $this->module->classId,
+														'joinType' => 'INNER JOIN',
+													),
+												),
+											),
+										);
+		*/
+		$dataProvider->criteria->join = 'JOIN tr_assignment a ON a.assignment_id = t.assignment_id JOIN ms_session s ON s.session_id = a.session_id';
+		$dataProvider->criteria->condition = 's.class_id = ' . $this->module->classId;
+		$dataProvider->criteria->addCondition('t.status_record <> "D"');
+		$dataProvider->criteria->addCondition('s.status_record <> "D"');
+		$dataProvider->criteria->addCondition('a.status_record <> "D"');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
