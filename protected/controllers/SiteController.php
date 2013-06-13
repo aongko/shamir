@@ -119,9 +119,32 @@ class SiteController extends Controller
 				$headers="From: $name <{$model->email}>\r\n".
 					"Reply-To: {$model->email}\r\n".
 					"MIME-Version: 1.0\r\n".
-					"Content-type: text/plain; charset=UTF-8";
+					"Content-type: text/plain; charset=UTF-8\r\n".
+					"Subject: $subject";
 
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
+				require_once "Mail.php";
+
+				$host = "ssl://smtp.gmail.com";
+				$port = "465";
+				$username = "myaccount@gmail.com";
+				$password = "password";
+
+				$smtp = Mail::factory('smtp',
+				    array ('host' => $host,
+				        'port' => $port,
+				        'auth' => true,
+				        'username' => $username,
+				        'password' => $password));
+				$to = Yii::app()->params['adminEmail'];
+				$mail = $smtp->send($to, $headers, $model->body);
+
+				if (PEAR::isError($mail))
+				    echo("<p>" . $mail->getMessage() . "</p>");
+				else
+				    //echo("<p>Message successfully sent!</p>");
+
+
+				//mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
 				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
 				$this->refresh();
 			}
